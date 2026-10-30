@@ -10,7 +10,10 @@ Simulación académica full stack para transferir dinero entre cuentas en pesos 
 - [Matriz y verificación final](docs/verificacion-entrega.md).
 - [Enunciado original](SpringBoot%20AI.pdf), ejercicio en página 11.
 
-La nueva documentación está preparada localmente en `developer`. No se hizo push ni merge; `main` permanece intacta. Los enlaces anteriores estarán disponibles en GitHub cuando se publique esta actualización autorizadamente.
+La entrega académica está publicada en `main`, integrada desde `developer` mediante el [Pull Request #1](https://github.com/Sbedoyar/ProyectoBanco/pull/1). El informe académico y los prompts están publicados en `docs/`; las evidencias y los resultados de verificación también están disponibles en el repositorio.
+
+- `main`: rama principal y versión estable para la entrega académica.
+- `developer`: rama de desarrollo; sus cambios se integran en `main` mediante pull requests.
 
 ## Funcionalidades
 
@@ -48,9 +51,8 @@ specs/                                decisiones y verificaciones históricas
 Requisitos del entorno reproducido: JDK 25, Node 24/npm, PowerShell y PostgreSQL 18 con herramientas en `C:/Program Files/PostgreSQL/18/bin`. Primera preparación requiere acceso a npm/Maven Central. No se requiere Docker.
 
 ```powershell
-git clone https://github.com/Sbedoyar/ProyectoBanco.git
+git clone --branch main https://github.com/Sbedoyar/ProyectoBanco.git
 cd ProyectoBanco
-git switch developer
 ./scripts/local-db.ps1
 npm.cmd --prefix frontend ci
 npm.cmd --prefix frontend run build
@@ -81,7 +83,7 @@ Pop-Location
 
 JUnit y Playwright usan `bank_test` y deben ejecutarse secuencialmente. JUnit limpia únicamente la base de prueba tras comprobar nombre/rol/URL. No usarla para demostraciones. La falla SQL inducida en el caso de rollback es esperada.
 
-Verificación ejecutada 29-10-2026 Bogotá: **14 Java + 21 Vitest + 15 Playwright = 50 aprobadas, 0 fallidas, 0 omitidas**. Nueve checks en código 0: frontera SHA256, unitarias, build React, lint, formato, package Java, integración PostgreSQL, E2E y Javadoc. [Comandos ylogs publicables](docs/evidencias/verificacion-2026-10-29/resultados-publicables.json). No hay insignias ni métricas de cobertura inventadas.
+Verificación ejecutada 29-10-2026 Bogotá: **14 Java + 21 Vitest + 15 Playwright = 50 aprobadas, 0 fallidas, 0 omitidas**. Nueve checks en código 0: frontera SHA256, unitarias, build React, lint, formato, package Java, integración PostgreSQL, E2E y Javadoc. [Comandos y logs publicables](docs/evidencias/verificacion-2026-10-29/resultados-publicables.json). No hay insignias ni métricas de cobertura inventadas.
 
 Para ejecutar por separado: `./scripts/test-backend.ps1`, `npm.cmd --prefix frontend run test -- --run`, `npm.cmd --prefix frontend run lint`, `npm.cmd --prefix frontend run format:check`, `npm.cmd --prefix frontend run build`, `./scripts/test-ui.ps1` y `./backend/mvnw.cmd -f backend/pom.xml -B -ntp javadoc:javadoc`. Javadoc queda en `backend/target/reports/apidocs`.
 
@@ -112,4 +114,4 @@ Transferencia recibe `targetAccountNumber` y `amount` como cadena; el origen sal
 
 Simulación local, sin integración financiera, recuperación de contraseña ni auditoría bancaria. El SQL inicial no reemplaza una estrategia de migraciones futura. QR no firmado, búsqueda sólo de página y validación visual acotada a Chromium Windows. Respaldar antes de modificar esquema; no alterar saldos para preparar evidencias.
 
-Repositorio [Sbedoyar/ProyectoBanco](https://github.com/Sbedoyar/ProyectoBanco). Trabajar en `developer`; no modificar `main`. [Revisión de Git y seguridad](docs/evidencias/git-seguridad.json). La fuente Manrope se distribuye con [licencia OFL](frontend/public/fonts/OFL.txt).
+Repositorio [Sbedoyar/ProyectoBanco](https://github.com/Sbedoyar/ProyectoBanco), con `main` como rama estable de entrega y `developer` para cambios posteriores. Integrar actualizaciones mediante pull requests. [Revisión de Git y seguridad](docs/evidencias/git-seguridad.json). La fuente Manrope se distribuye con [licencia OFL](frontend/public/fonts/OFL.txt).

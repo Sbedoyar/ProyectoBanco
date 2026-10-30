@@ -1,11 +1,17 @@
 # Informe académico de ProyectoBanco
 
-Tecnológico de Antioquia  
-Asignatura Diseño del Sistema  
-Integrantes [PENDIENTE DE COMPLETAR]  
-Docente [PENDIENTE DE COMPLETAR]  
-Grupo [PENDIENTE DE COMPLETAR]  
-Entrega 30 de octubre de 2026  
+Tecnológico de Antioquia
+
+Asignatura Diseño del Sistema
+
+Estudiante / Integrante: Santiago Bedoya Rendon
+
+Docente: Diego Jose Luis Botia Valderrama
+
+Grupo: Grupo 1
+
+Entrega 30 de octubre de 2026
+
 Verificación 29 de octubre de 2026 hora de Bogotá
 
 Simulación académica de transferencias bancarias en pesos colombianos.
@@ -232,7 +238,7 @@ Requisitos del entorno reproducido: Windows PowerShell, JDK 25, Node 24/npm y Po
 ```powershell
 git clone https://github.com/Sbedoyar/ProyectoBanco.git
 cd ProyectoBanco
-git switch developer
+git switch main
 ./scripts/local-db.ps1
 npm.cmd --prefix frontend ci
 npm.cmd --prefix frontend run build
@@ -262,13 +268,13 @@ DB_URL, DB_USERNAME y DB_PASSWORD son obligatorias; los scripts las configuran s
 
 Se comprobaron traslado, histórico y QR; los reintentos preservan identidad y los saldos persisten tras reiniciar. La navegación separa cada tarea y mantiene la sesión sobre las rutas. Las nueve comprobaciones y cincuenta pruebas aprobaron.
 
-La entrega incluye informe y prompts en Markdown, Word y PDF, guía y matriz. La actualización remota permanece pendiente de autorización de push; no se confunde preparación local con publicación.
+La entrega incluye informe y prompts en Markdown, Word y PDF, guía y matriz. El informe y los prompts están publicados en docs/ de main, junto con las evidencias y los resultados de verificación.
 
 ## 25 Limitaciones
 
 Simulación local sin bancos reales. QR sin firma. Búsqueda sólo de página. La sesión de servidor no necesariamente sobrevive al reinicio. Sin recuperación de contraseña ni hosting productivo. El SQL inicial requiere estrategia de migración para evolución futura.
 
-Las pruebas cubren escenarios explícitos, no ausencia universal de defectos. La revisión Git inspecciona rutas y valores locales conocidos, no es escáner exhaustivo. Los datos de autor, docente y grupo deben completarse. No se modificó main ni se hizo commit, push o merge.
+Las pruebas cubren escenarios explícitos, no ausencia universal de defectos. La revisión Git inspecciona rutas y valores locales conocidos, no es escáner exhaustivo. Las correcciones documentales posteriores se preparan en developer y se integran mediante pull request hacia main.
 
 ## 26 Conclusiones
 
@@ -278,7 +284,7 @@ La idempotencia distingue intención de intento HTTP. Histórico y QR comunican 
 
 ## 27 Repositorio GitHub
 
-Repositorio indicado y remoto local verificado: https://github.com/Sbedoyar/ProyectoBanco. Rama de trabajo developer; main permanece intacta. La aplicación ya está publicada según el estudiante; los documentos nuevos necesitan publicación autorizada para estar disponibles remotamente.
+Repositorio publicado: https://github.com/Sbedoyar/ProyectoBanco. main es la rama principal y versión estable de la entrega académica, integrada desde developer mediante el Pull Request #1. developer es la rama de desarrollo. El informe, los prompts y las evidencias están disponibles en el repositorio; estas correcciones se preparan para un segundo pull request.
 
 ## 28 Documento de prompts
 
@@ -291,9 +297,9 @@ Prompts_Utilizados.docx, Prompts_Utilizados.pdf y prompts.md organizan quince fa
 | Traslado | TransferService, TransferForm, useBanking | JUnit transferAndReplayHaveOneReferenceAndExactBalances; UI recorrido real | Implementado y comprobado |
 | Histórico | MovementQueryRepository, MovementsPage | JUnit historyAndReceiptsAreScopedToParticipants; movimientos.png | Implementado y comprobado |
 | QR básico | ReceiptPanel, qrPayload | UI decodifica PNG con jsQR y compara datos; comprobante-qr.png | Implementado y comprobado |
-| Informe | informe.md y DOCX/PDF | Revisión de contenido y páginas | Preparado localmente |
-| GitHub | Remoto Sbedoyar/ProyectoBanco, developer | Inspección Git; sin push de esta entrega | Publicación documental pendiente |
-| Prompts | prompts.md y DOCX/PDF | Originales y síntesis identificadas | Preparado localmente |
+| Informe | informe.md y DOCX/PDF | Revisión de contenido y páginas | Publicado en docs/ |
+| GitHub | Repositorio Sbedoyar/ProyectoBanco, main | Entrega integrada mediante PR #1 | Publicado en main |
+| Prompts | prompts.md y DOCX/PDF | Originales y síntesis identificadas | Publicado en docs/ |
 
 ## 30 Fuentes y referencias
 
