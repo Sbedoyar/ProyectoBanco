@@ -1,0 +1,692 @@
+{
+  "version": 3,
+  "id": "001",
+  "mode": "automated",
+  "passed": true,
+  "verifiedAt": "2026-10-24T06:23:07.944Z",
+  "fingerprint": "bdcca20f7252d7717fd639ad2e3ba081237269606984a8180273ba2818bcb9e1",
+  "attestedFiles": 60,
+  "sourceChangedDuringVerification": false,
+  "changedDuringVerification": [],
+  "changedDuringVerificationCount": 0,
+  "reason": null,
+  "checks": [
+    {
+      "id": "frontend-unit",
+      "command": "npm.cmd run test -- --run",
+      "cwd": "frontend",
+      "timeoutMs": 120000,
+      "kind": "automated"
+    },
+    {
+      "id": "frontend-build",
+      "command": "npm.cmd run build",
+      "cwd": "frontend",
+      "timeoutMs": 120000,
+      "kind": "automated"
+    },
+    {
+      "id": "frontend-lint",
+      "command": "npm.cmd run lint",
+      "cwd": "frontend",
+      "timeoutMs": 120000,
+      "kind": "automated"
+    },
+    {
+      "id": "backend-build",
+      "command": "mvnw.cmd -B -ntp -DskipTests package",
+      "cwd": "backend",
+      "timeoutMs": 180000,
+      "kind": "automated"
+    },
+    {
+      "id": "backend-integration",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+      "cwd": ".",
+      "timeoutMs": 180000,
+      "kind": "automated"
+    },
+    {
+      "id": "ui-e2e",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+      "cwd": ".",
+      "timeoutMs": 300000,
+      "kind": "ui"
+    },
+    {
+      "id": "backend-docs",
+      "command": "mvnw.cmd -B -ntp javadoc:javadoc",
+      "cwd": "backend",
+      "timeoutMs": 180000,
+      "kind": "automated"
+    }
+  ],
+  "timeoutOverride": null,
+  "acceptance": {
+    "criteria": [
+      {
+        "id": "AC-01",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration",
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          },
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-02",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-03",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-04",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-05",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration",
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          },
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-06",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-07",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-08",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-09",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-10",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-11",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-12",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-13",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-14",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration",
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          },
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-15",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration",
+          "frontend-unit"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          },
+          {
+            "checkId": "frontend-unit",
+            "command": "npm.cmd run test -- --run",
+            "cwd": "frontend",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-16",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration",
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          },
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-17",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-18",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-19",
+        "status": "passed",
+        "method": "automated",
+        "kind": "interaction",
+        "checkIds": [
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-20",
+        "status": "passed",
+        "method": "automated",
+        "kind": "visual",
+        "checkIds": [
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-21",
+        "status": "passed",
+        "method": "automated",
+        "kind": "interaction",
+        "checkIds": [
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      },
+      {
+        "id": "AC-22",
+        "status": "passed",
+        "method": "inspection",
+        "kind": "functional"
+      },
+      {
+        "id": "AC-23",
+        "status": "passed",
+        "method": "manual",
+        "kind": "functional"
+      },
+      {
+        "id": "AC-24",
+        "status": "passed",
+        "method": "automated",
+        "kind": "functional",
+        "checkIds": [
+          "backend-integration",
+          "ui-e2e"
+        ],
+        "checks": [
+          {
+            "checkId": "backend-integration",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          },
+          {
+            "checkId": "ui-e2e",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+            "cwd": ".",
+            "status": "PASSED"
+          }
+        ],
+        "execution": "PASSED"
+      }
+    ],
+    "scope": "DECLARED_EVIDENCE_WITH_EXECUTED_CHECK_BINDINGS",
+    "truthOfEvidence": "AGENT_OR_HUMAN_REVIEW_REQUIRED",
+    "automatedChecksPassed": true
+  },
+  "results": [
+    {
+      "command": "npm.cmd run test -- --run",
+      "checkId": "frontend-unit",
+      "cwd": "C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Diseño del Sistema\\ProyectoBanco\\frontend",
+      "checkCwd": "frontend",
+      "kind": "automated",
+      "timeoutMs": 120000,
+      "processId": 52152,
+      "startedAt": "2026-10-24T06:20:56.576Z",
+      "finishedAt": "2026-10-24T06:20:58.459Z",
+      "durationMs": 1882,
+      "output": "\n> academic-bank-web@1.0.0 test\n> vitest --run\n\n\n RUN  v5.0.5 C:/Users/santi/Documents/Universidad/SEMESTRE 4/Diseño del Sistema/ProyectoBanco/frontend\n\n\n Test Files  1 passed (1)\n      Tests  3 passed (3)\n   Start at  01:20:58\n   Duration  295ms (import 40%, transform 31%, worker 18%, tests 11%, environment 1%)\n\n",
+      "outputTruncated": false,
+      "outputBytes": 316,
+      "outputTotalBytes": 316,
+      "outputLimitExceeded": false,
+      "outputLimitBytes": 8388608,
+      "outputLog": "specs/.omni/verification-logs/4ef49f0b-70ac-42c2-abc4-16bf8d37e5ec.log",
+      "timedOut": false,
+      "exitCode": 0,
+      "signal": null,
+      "errorType": null,
+      "outputLogHash": "d9bf4d2cf803583cd71657ac43f9ae41cfb3e8d2119f9ae574c4acb905373d8d"
+    },
+    {
+      "command": "npm.cmd run build",
+      "checkId": "frontend-build",
+      "cwd": "C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Diseño del Sistema\\ProyectoBanco\\frontend",
+      "checkCwd": "frontend",
+      "kind": "automated",
+      "timeoutMs": 120000,
+      "processId": 39580,
+      "startedAt": "2026-10-24T06:20:58.465Z",
+      "finishedAt": "2026-10-24T06:21:04.031Z",
+      "durationMs": 5566,
+      "output": "\n> academic-bank-web@1.0.0 build\n> tsc -b && vite build\n\nvite v8.3.5 building client environment for production...\ntransforming...\n✓ 47 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.42 kB │ gzip:  0.30 kB\ndist/assets/index-CWPzZDPJ.css    8.85 kB │ gzip:  2.62 kB\ndist/assets/index-DQNoYTD3.js   260.65 kB │ gzip: 82.83 kB\n\n✓ built in 276ms\n",
+      "outputTruncated": false,
+      "outputBytes": 405,
+      "outputTotalBytes": 405,
+      "outputLimitExceeded": false,
+      "outputLimitBytes": 8388608,
+      "outputLog": "specs/.omni/verification-logs/4fe1de07-fa5d-458b-aebf-dc83c33a6204.log",
+      "timedOut": false,
+      "exitCode": 0,
+      "signal": null,
+      "errorType": null,
+      "outputLogHash": "75c9f71912b2eee36f6cc325cc3a739ad022b408cf026ba5e41a783d8fd76169"
+    },
+    {
+      "command": "npm.cmd run lint",
+      "checkId": "frontend-lint",
+      "cwd": "C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Diseño del Sistema\\ProyectoBanco\\frontend",
+      "checkCwd": "frontend",
+      "kind": "automated",
+      "timeoutMs": 120000,
+      "processId": 15888,
+      "startedAt": "2026-10-24T06:21:04.081Z",
+      "finishedAt": "2026-10-24T06:21:17.686Z",
+      "durationMs": 13605,
+      "output": "\n> academic-bank-web@1.0.0 lint\n> eslint .\n\n",
+      "outputTruncated": false,
+      "outputBytes": 44,
+      "outputTotalBytes": 44,
+      "outputLimitExceeded": false,
+      "outputLimitBytes": 8388608,
+      "outputLog": "specs/.omni/verification-logs/1d4c1c8a-c1d5-4e93-ac9d-bb3102202308.log",
+      "timedOut": false,
+      "exitCode": 0,
+      "signal": null,
+      "errorType": null,
+      "outputLogHash": "9641de4ea5bc54a40b81b923bf5f74fb995896cacaeebb648456ad4e76862b09"
+    },
+    {
+      "command": "mvnw.cmd -B -ntp -DskipTests package",
+      "checkId": "backend-build",
+      "cwd": "C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Diseño del Sistema\\ProyectoBanco\\backend",
+      "checkCwd": "backend",
+      "kind": "automated",
+      "timeoutMs": 180000,
+      "processId": 66264,
+      "startedAt": "2026-10-24T06:21:17.692Z",
+      "finishedAt": "2026-10-24T06:21:32.389Z",
+      "durationMs": 14697,
+      "output": "[INFO] Scanning for projects...\r\n[INFO] \r\n[INFO] --------------------------< co.edu.tdea:bank >--------------------------\r\n[INFO] Building Banco acad�mico 1.0.0\r\n[INFO]   from pom.xml\r\n[INFO] --------------------------------[ jar ]---------------------------------\r\n[INFO] \r\n[INFO] --- resources:3.5.0:resources (default-resources) @ bank ---\r\n[INFO] Copying 2 resources from src\\main\\resources to target\\classes\r\n[INFO] Copying 3 resources from ..\\frontend\\dist to target\\classes\\static\r\n[INFO] \r\n[INFO] --- compiler:3.15.0:compile (default-compile) @ bank ---\r\n[INFO] Recompiling the module because of changed source code.\r\n[INFO] Compiling 13 source files with javac [debug parameters release 25] to target\\classes\r\n[INFO] \r\n[INFO] --- resources:3.5.0:testResources (default-testResources) @ bank ---\r\n[INFO] skip non existing resourceDirectory C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Dise�o del Sistema\\ProyectoBanco\\backend\\src\\test\\resources\r\n[INFO] \r\n[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ bank ---\r\n[INFO] Recompiling the module because of changed dependency.\r\n[INFO] Compiling 2 source files with javac [debug parameters release 25] to target\\test-classes\r\n[INFO] \r\n[INFO] --- surefire:3.5.6:test (default-test) @ bank ---\r\n[INFO] Tests are skipped.\r\n[INFO] \r\n[INFO] --- jar:3.5.1:jar (default-jar) @ bank ---\r\n[INFO] Building jar: C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Dise�o del Sistema\\ProyectoBanco\\backend\\target\\bank-1.0.0.jar\r\n[INFO] \r\n[INFO] --- spring-boot:4.1.2:repackage (repackage) @ bank ---\r\n[INFO] Replacing main artifact C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Dise�o del Sistema\\ProyectoBanco\\backend\\target\\bank-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.\r\n[INFO] The original artifact has been renamed to C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Dise�o del Sistema\\ProyectoBanco\\backend\\target\\bank-1.0.0.jar.original\r\n[INFO] ------------------------------------------------------------------------\r\n[INFO] BUILD SUCCESS\r\n[INFO] ------------------------------------------------------------------------\r\n[INFO] Total time:  9.884 s\r\n[INFO] Finished at: 2026-10-24T01:21:32-05:00\r\n[INFO] ------------------------------------------------------------------------\r\n",
+      "outputTruncated": false,
+      "outputBytes": 2277,
+      "outputTotalBytes": 2277,
+      "outputLimitExceeded": false,
+      "outputLimitBytes": 8388608,
+      "outputLog": "specs/.omni/verification-logs/9b9a944d-d764-4aae-9b50-b51c5b6ed57e.log",
+      "timedOut": false,
+      "exitCode": 0,
+      "signal": null,
+      "errorType": null,
+      "outputLogHash": "a05e7c64bb6c243f19814634ee790e29e3b1574ff733c4d2dc5fcb56ea16c187"
+    },
+    {
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+      "checkId": "backend-integration",
+      "cwd": "C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Diseño del Sistema\\ProyectoBanco",
+      "checkCwd": ".",
+      "kind": "automated",
+      "timeoutMs": 180000,
+      "processId": 65460,
+      "startedAt": "2026-10-24T06:21:32.396Z",
+      "finishedAt": "2026-10-24T06:22:02.882Z",
+      "durationMs": 30486,
+      "output": "[INFO] Scanning for projects...\r\n[INFO] \r\n[INFO] --------------------------< co.edu.tdea:bank >--------------------------\r\n[INFO] Building Banco acad�mico 1.0.0\r\n[INFO]   from pom.xml\r\n[INFO] --------------------------------[ jar ]---------------------------------\r\n[INFO] \r\n[INFO] --- resources:3.5.0:resources (default-resources) @ bank ---\r\n[INFO] Copying 2 resources from src\\main\\resources to target\\classes\r\n[INFO] Copying 3 resources from ..\\frontend\\dist to target\\classes\\static\r\n[INFO] \r\n[INFO] --- compiler:3.15.0:compile (default-compile) @ bank ---\r\n[INFO] Recompiling the module because of changed source code.\r\n[INFO] Compiling 13 source files with javac [debug parameters release 25] to target\\classes\r\n[INFO] \r\n[INFO] --- resources:3.5.0:testResources (default-testResources) @ bank ---\r\n[INFO] skip non existing resourceDirectory C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Dise�o del Sistema\\ProyectoBanco\\backend\\src\\test\\resources\r\n[INFO] \r\n[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ bank ---\r\n[INFO] Recompiling the module because of changed dependency.\r\n[INFO] Compiling 2 source files with javac [debug parameters release 25] to target\\test-classes\r\n[INFO] \r\n[INFO] --- surefire:3.5.6:test (default-test) @ bank ---\r\n[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider\r\n[INFO] \r\n[INFO] -------------------------------------------------------\r\n[INFO]  T E S T S\r\n[INFO] -------------------------------------------------------\r\n[INFO] Running co.edu.tdea.bank.BankIntegrationTest\r\n01:21:44.550 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [co.edu.tdea.bank.BankIntegrationTest]: BankIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\r\n01:21:44.819 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration co.edu.tdea.bank.BankApplication for test class co.edu.tdea.bank.BankIntegrationTest\r\n01:21:44.954 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [co.edu.tdea.bank.BankIntegrationTest]: BankIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\r\n01:21:44.956 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration co.edu.tdea.bank.BankApplication for test class co.edu.tdea.bank.BankIntegrationTest\r\n\r\n  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  '  |____| .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n\r\n :: Spring Boot ::                (v4.1.2)\r\n\r\n2026-10-24T01:21:45.455-05:00  INFO 53084 --- [academic-bank] [           main] co.edu.tdea.bank.BankIntegrationTest     : Starting BankIntegrationTest using Java 25.0.4.1 with PID 53084 (started by santi in C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Dise�o del Sistema\\ProyectoBanco\\backend)\r\n2026-10-24T01:21:45.457-05:00  INFO 53084 --- [academic-bank] [           main] co.edu.tdea.bank.BankIntegrationTest     : No active profile set, falling back to 1 default profile: \"default\"\r\n2026-10-24T01:21:46.479-05:00  INFO 53084 --- [academic-bank] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.\r\n2026-10-24T01:21:46.571-05:00  INFO 53084 --- [academic-bank] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 3 JPA repository interfaces.\r\n2026-10-24T01:21:47.284-05:00  INFO 53084 --- [academic-bank] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...\r\n2026-10-24T01:21:47.640-05:00  INFO 53084 --- [academic-bank] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@632cf7d3\r\n2026-10-24T01:21:47.642-05:00  INFO 53084 --- [academic-bank] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.\r\n2026-10-24T01:21:47.813-05:00  INFO 53084 --- [academic-bank] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]\r\n2026-10-24T01:21:47.889-05:00  INFO 53084 --- [academic-bank] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final\r\n2026-10-24T01:21:48.623-05:00  INFO 53084 --- [academic-bank] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer\r\n2026-10-24T01:21:48.874-05:00  INFO 53084 --- [academic-bank] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:\n\tDatabase JDBC URL [jdbc:postgresql://127.0.0.1:55432/bank_test]\n\tDatabase driver: PostgreSQL JDBC Driver\n\tDatabase dialect: PostgreSQLDialect\n\tDatabase version: 18.6\n\tDefault catalog/schema: bank_test/public\n\tAutocommit mode: undefined/unknown\n\tIsolation level: READ_COMMITTED [default READ_COMMITTED]\n\tJDBC fetch size: none\n\tPool: DataSourceConnectionProvider\n\tMinimum pool size: undefined/unknown\n\tMaximum pool size: undefined/unknown\r\n2026-10-24T01:21:50.714-05:00  INFO 53084 --- [academic-bank] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)\r\n2026-10-24T01:21:50.919-05:00  INFO 53084 --- [academic-bank] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'\r\n2026-10-24T01:21:51.163-05:00  INFO 53084 --- [academic-bank] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.\r\n2026-10-24T01:21:52.403-05:00  INFO 53084 --- [academic-bank] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetails\r\n2026-10-24T01:21:52.651-05:00  INFO 53084 --- [academic-bank] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]\r\n2026-10-24T01:21:53.065-05:00  INFO 53084 --- [academic-bank] [           main] co.edu.tdea.bank.BankIntegrationTest     : Started BankIntegrationTest in 8.013 seconds (process running for 10.171)\r\nMockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3\r\nWARNING: A Java agent has been loaded dynamically (C:\\Users\\santi\\.m2\\repository\\net\\bytebuddy\\byte-buddy-agent\\1.18.15\\byte-buddy-agent-1.18.15.jar)\r\nWARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning\r\nWARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information\r\nWARNING: Dynamic loading of agents will be disallowed by default in a future release\r\nOpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended\r\n2026-10-24T01:21:59.519-05:00  WARN 53084 --- [academic-bank] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: P0001\r\n2026-10-24T01:21:59.520-05:00  WARN 53084 --- [academic-bank] [           main] org.hibernate.orm.jdbc.error             : ERROR: test credit failure\n  Where: PL/pgSQL function fail_credit_test() line 1 at RAISE\r\n2026-10-24T01:22:02.457-05:00  WARN 53084 --- [academic-bank] [pool-6-thread-2] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505\r\n2026-10-24T01:22:02.457-05:00  WARN 53084 --- [academic-bank] [pool-6-thread-2] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint \"app_user_email_key\"\n  Detail: Key (email)=(concurrent@example.test) already exists.\r\n[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.39 s -- in co.edu.tdea.bank.BankIntegrationTest\r\n[INFO] Running co.edu.tdea.bank.IdleSessionFilterTest\r\n[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in co.edu.tdea.bank.IdleSessionFilterTest\r\n[INFO] \r\n[INFO] Results:\r\n[INFO] \r\n[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0\r\n[INFO] \r\n[INFO] ------------------------------------------------------------------------\r\n[INFO] BUILD SUCCESS\r\n[INFO] ------------------------------------------------------------------------\r\n[INFO] Total time:  25.764 s\r\n[INFO] Finished at: 2026-10-24T01:22:02-05:00\r\n[INFO] ------------------------------------------------------------------------\r\n",
+      "outputTruncated": false,
+      "outputBytes": 9154,
+      "outputTotalBytes": 9154,
+      "outputLimitExceeded": false,
+      "outputLimitBytes": 8388608,
+      "outputLog": "specs/.omni/verification-logs/cfadbe6f-5901-4c8b-8c9a-93c7af61f2dc.log",
+      "timedOut": false,
+      "exitCode": 0,
+      "signal": null,
+      "errorType": null,
+      "outputLogHash": "3a1b32800b4ace4e69c698bd213cb5b79c886700239294b24e625a9b58844711"
+    },
+    {
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+      "checkId": "ui-e2e",
+      "cwd": "C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Diseño del Sistema\\ProyectoBanco",
+      "checkCwd": ".",
+      "kind": "ui",
+      "timeoutMs": 300000,
+      "processId": 3772,
+      "startedAt": "2026-10-24T06:22:02.886Z",
+      "finishedAt": "2026-10-24T06:22:59.126Z",
+      "durationMs": 56240,
+      "output": "Clǧster aislado disponible en 127.0.0.1:55432; bases bank_demo y bank_test.\r\nBackend test iniciado (PID 50012), puerto 8081.\r\n\n> academic-bank-web@1.0.0 test:e2e\n> playwright test\n\n[WebServer] (node:68020) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)\n\nRunning 9 tests using 1 worker\n\n(node:45848) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n  ok 1 [chromium] › tests\\journey.spec.ts:9:1 › HTTP: autorización, CSRF, identidad única y logout (1.4s)\n  ok 2 [chromium] › tests\\journey.spec.ts:20:1 › recorrido real: registro, transferencia, QR decodificado e histórico privado (4.7s)\n  ok 3 [chromium] › tests\\journey.spec.ts:29:1 › respuesta perdida conserva clave y reintenta sin segundo débito (2.5s)\n  ok 4 [chromium] › tests\\journey.spec.ts:36:1 › validación, rechazo sin QR y reflow/teclado (2.3s)\n  ok 5 [chromium] › tests\\journey.spec.ts:43:1 › fallo de QR regenera imagen sin repetir transferencia (2.2s)\n  ok 6 [chromium] › tests\\journey.spec.ts:49:1 › sesión terminada exige acceso y conserva intención sin POST automático (3.8s)\nMeasured contrast {\n  hint: 5.753798664208061,\n  button: 7.928407898949497,\n  boundary: 3.5343104229072173\n}\n  ok 7 [chromium] › tests\\journey.spec.ts:55:1 › contraste medido de textos/controles y reflow al ampliar (1.4s)\n  ok 8 [chromium] › tests\\journey.spec.ts:66:1 › credenciales incorrectas muestran error de acceso sin fingir sesión vencida (758ms)\n  ok 9 [chromium] › tests\\persistence.spec.ts:4:1 › reinicio real conserva saldo, histórico y apertura única (16.8s)\n\n  9 passed (41.3s)\n",
+      "outputTruncated": false,
+      "outputBytes": 1802,
+      "outputTotalBytes": 1802,
+      "outputLimitExceeded": false,
+      "outputLimitBytes": 8388608,
+      "outputLog": "specs/.omni/verification-logs/cddebbf0-ba4a-41c1-93be-eab1617ae891.log",
+      "timedOut": false,
+      "exitCode": 0,
+      "signal": null,
+      "errorType": null,
+      "outputLogHash": "b2f74cadacba2084bc40150cd8372ab8ee0b03a95161b53a42b2e4918dcfba01"
+    },
+    {
+      "command": "mvnw.cmd -B -ntp javadoc:javadoc",
+      "checkId": "backend-docs",
+      "cwd": "C:\\Users\\santi\\Documents\\Universidad\\SEMESTRE 4\\Diseño del Sistema\\ProyectoBanco\\backend",
+      "checkCwd": "backend",
+      "kind": "automated",
+      "timeoutMs": 180000,
+      "processId": 64300,
+      "startedAt": "2026-10-24T06:22:59.135Z",
+      "finishedAt": "2026-10-24T06:23:07.742Z",
+      "durationMs": 8608,
+      "output": "[INFO] Scanning for projects...\r\n[INFO] \r\n[INFO] --------------------------< co.edu.tdea:bank >--------------------------\r\n[INFO] Building Banco acad�mico 1.0.0\r\n[INFO]   from pom.xml\r\n[INFO] --------------------------------[ jar ]---------------------------------\r\n[INFO] \r\n[INFO] >>> javadoc:3.12.0:javadoc (default-cli) > generate-sources @ bank >>>\r\n[INFO] \r\n[INFO] <<< javadoc:3.12.0:javadoc (default-cli) < generate-sources @ bank <<<\r\n[INFO] \r\n[INFO] \r\n[INFO] --- javadoc:3.12.0:javadoc (default-cli) @ bank ---\r\n[INFO] ------------------------------------------------------------------------\r\n[INFO] BUILD SUCCESS\r\n[INFO] ------------------------------------------------------------------------\r\n[INFO] Total time:  3.944 s\r\n[INFO] Finished at: 2026-10-24T01:23:07-05:00\r\n[INFO] ------------------------------------------------------------------------\r\n",
+      "outputTruncated": false,
+      "outputBytes": 861,
+      "outputTotalBytes": 861,
+      "outputLimitExceeded": false,
+      "outputLimitBytes": 8388608,
+      "outputLog": "specs/.omni/verification-logs/cab9f0ec-5764-4bd8-92c9-f78ad92f0d88.log",
+      "timedOut": false,
+      "exitCode": 0,
+      "signal": null,
+      "errorType": null,
+      "outputLogHash": "eb8de409204513eee2fc9205c27bd96362112911517f7c5f40bf32caa7cc7194"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "recordedAt": "2026-10-24T05:15:55.991Z",
+  "scope": "CONTEXT_INPUTS_V2",
+  "inputs": {
+    "AGENTS.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "CONSTITUTION.md": "5e9cf671b943dcd1985043345fa6d48a494850006ccac02d9c7894164cb45da1",
+    "SpringBoot AI.pdf": "b015065ddc5a4c20405cff6c30eb9cb8aad5df4d945fd1f1af2a601b4c60cbdd",
+    "specs/README.md": "fc9064fd9fa0610e69c07ecef74009e135dcf1ebee009464739ebda8e3ae30e7",
+    "specs/001-transferencias-bancarias/spec.md": "be8462801b824984dc5d6a490894d95591024cf635052a1f8b9586b96d0ab5c4",
+    "specs/project-context.md": "a375c54513e03532164bf8109b59584f3433645aa98a219afa59b1476d4448bd"
+  },
+  "reviewScope": "BYTE_BASELINE_AND_STRUCTURAL_LINKS_ONLY",
+  "semanticReview": "AGENT_OR_HUMAN_REQUIRED"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "redesign-fintech",
+  "topic": "visual-design",
+  "status": "approved",
+  "value": "Rediseño importante de presentación con frontend-design: índigo/tinta/lavanda, Manrope local OFL, SVG propios y navegación por anclas. Mantener React/TS/módulos y congelar backend/API/seguridad/datos/lógica monetaria.",
+  "basis": "Solicitud explícita del usuario de transformar visualmente login/registro/dashboard/saldo/formulario/histórico/QR. La apariencia puede cambiar ampliamente; funcionalidad intacta. No pide publicación ni agentes.",
+  "required": true,
+  "appliesTo": [
+    "003-rediseno-fintech"
+  ],
+  "sources": [
+    {
+      "url": "https://github.com/google/fonts/tree/main/ofl/manrope",
+      "consultedAt": "2026-10-24",
+      "appliesTo": "Fuente variable Manrope y licencia OFL copiadas como activos locales, no nueva dependencia de runtime",
+      "authority": "official"
+    }
+  ],
+  "recordedAt": "2026-10-25T02:54:24.661Z",
+  "revision": 1
+}

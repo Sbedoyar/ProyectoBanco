@@ -1,0 +1,9 @@
+# Verificación de navegación modular
+
+Preflight ejecutado25-10-2026 UTC (24-10 Bogotá): nueve checks exit0. Logs/comandos/timestamps en evidence/checks/results.json;14Java+21Vitest+15Playwright=50 pruebas. Suite formal posterior en verification.json liga fuentes finales. El último ajuste CSS de flex intrínseco se ejercitó en E2E; el catálogo formal recompila el artefacto.
+
+AC01 rutas/protección/foco/logout: ui-e2e. AC02 resumen acotado/transferencia/pending: ui-e2e+presentation-boundary. AC03 páginas/filtros/detalles: ui-e2e. AC04 visual/reflow: ui-e2e y observación real de capturas. AC05 integridad/docs: nueve checks. Se conservaron las12 E2E anteriores y se añadieron3; unitarias14→21. Contraste calculado hint5.55/botón6.10/borde3.19.
+
+Observación Codex posterior a sesión ed696923-749a-4a54-a893-c49ccc1eefa7: capturas abiertas con view_image de resumen360, transferencias1440 y perfil1440; revisión anterior de resumen1440, transferencia320, movimientos360 y comprobantes1440. Azul/violeta/Manrope/iconos conservados, sidebar escritorio y navegación móvil en dos filas; títulos, saldos y controles legibles, módulos separados. Archivos evidence/ui/module-*.png; origen Chromium156/Playwright1.64, Vite5187, datos ficticios PostgreSQL bank_test. La captura completa del histórico es larga por sus20filas reales, no desbordamiento horizontal. No aprobación humana ni auditoría WCAG completa.
+
+useBanking/backend/HTTP/utilidades monetarias42 archivos idénticos SHA256. No cambios PostgreSQL, seguridad, contratos HTTP ni endpoints. HashRouter permite enlaces profundos al recargar JAR. Filtrado/búsqueda sólo de página; búsqueda global requeriría contrato adicional y no se implementó. Comprobantes listados desde movimientos y detalle por GET, sin persistencia inventada ni POST al visitar. Perfil sólo lectura. No Git/publicación.

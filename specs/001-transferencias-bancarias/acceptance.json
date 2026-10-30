@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 2,
+  "criteria": [
+    {
+      "id": "AC-01",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Registro secuencial/concurrente y fallo inducido en apertura: una identidad/cuenta y rollback completo. BankIntegrationTest; recorrido HTTP/UI real. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration",
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-02",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Saldo 1000000.00 y una apertura; repetir correo o seed no concede otro abono. BankIntegrationTest y DemoData inspeccionado. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration"
+      ]
+    },
+    {
+      "id": "AC-03",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "HTTP/UI autentican, mantienen sesión en la siguiente petición y rechazan credenciales incorrectas. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-04",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Peticiones anónimas account y transfer retornan 401 en HTTP real. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-05",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Origen resuelto por principal; cuenta propia aun con ownerId manipulado; recibos/claves de terceros rechazados en servicio. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration",
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-06",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "UI muestra número, saldo decimal propio y COP; endpoints autenticados usados en recorrido. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-07",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Transferencia 150000 desde dos cuentas de 1000000 produce 850000 y 1150000; una fila y referencia. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration"
+      ]
+    },
+    {
+      "id": "AC-08",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Cero/negativo rechazados sin cambios en saldos/filas. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration"
+      ]
+    },
+    {
+      "id": "AC-09",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Destino inexistente rechazado sin efectos. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration"
+      ]
+    },
+    {
+      "id": "AC-10",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Misma cuenta rechazada sin efectos. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration"
+      ]
+    },
+    {
+      "id": "AC-11",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Saldo insuficiente rechazado y saldo exacto transferido hasta cero. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration"
+      ]
+    },
+    {
+      "id": "AC-12",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Trigger de test falla durante escrituras: ambas cuentas y fila revierten; excepción esperada. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration"
+      ]
+    },
+    {
+      "id": "AC-13",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Dos peticiones de 700000 en transacciones independientes desde 1000000: sólo una confirma, total de fondos conservado. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration"
+      ]
+    },
+    {
+      "id": "AC-14",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Misma clave concurrente y respuesta perdida: un débito/referencia; contenido cambiado rechazado; reintento real tras recarga. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration",
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-15",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "BigDecimal/NUMERIC y formato de cadena: 0.01 exacto, tercer decimal rechazado; montos grandes formateados sin Number. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration",
+        "frontend-unit"
+      ]
+    },
+    {
+      "id": "AC-16",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Históricos propios OPENING/SENT/RECEIVED, referencia una vez por participante; comprobación API y UI. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration",
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-17",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Proceso Java detenido/reiniciado por harness: nuevo login conserva saldo, histórico y una apertura; sin restauración de fixture. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-18",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Imagen QR generada se decodifica con jsQR y se compara con comprobante persistido; campos permitidos/enmascarados. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-19",
+      "kind": "interaction",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Validación enfocada y rechazo sin QR; estado incierto conserva operación; error anterior se limpia al editar. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-20",
+      "kind": "visual",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Aviso de simulación y dinero ficticio en acceso y cuenta/formulario; capturas de render y revisión a 360/768/1440 y acceso1280. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-21",
+      "kind": "interaction",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Recorrido con dos cuentas; QR fallido se regenera sin POST nuevo; sesión terminada requiere acceso sin reenvío automático. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-22",
+      "kind": "functional",
+      "status": "passed",
+      "method": "inspection",
+      "evidence": "Javadoc generado con doclint y revisión semántica de BankController/BankService/Contracts/Repositories/IdleSessionFilter; firmas y reglas coherentes. TSDoc revisado en dominio/API/componentes. Evidencia y límites: verification.md."
+    },
+    {
+      "id": "AC-23",
+      "kind": "functional",
+      "status": "passed",
+      "method": "manual",
+      "evidence": "README, informe y prompts reales preparados; clúster, npm ci, builds y recorrido reproducidos localmente. No publicado; GitHub es operación posterior autorizada. Evidencia y límites: verification.md."
+    },
+    {
+      "id": "AC-24",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "IdleSessionFilterTest verifica exactamente 1799/1800 segundos con Clock controlado; HTTP logout y UI reautenticación sin POST automático. No se esperaron manualmente 30 minutos. Evidencia y límites: verification.md.",
+      "checkIds": [
+        "backend-integration",
+        "ui-e2e"
+      ]
+    }
+  ]
+}

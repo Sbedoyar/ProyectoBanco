@@ -1,0 +1,58 @@
+[
+  {
+    "id": "frontend-unit",
+    "command": "npm.cmd run test -- --run",
+    "cwd": "frontend",
+    "timestamp": "2026-10-25T00:48:00.6787225Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/frontend-unit.log"
+  },
+  {
+    "id": "frontend-build",
+    "command": "npm.cmd run build",
+    "cwd": "frontend",
+    "timestamp": "2026-10-25T00:48:03.7664390Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/frontend-build.log"
+  },
+  {
+    "id": "frontend-lint",
+    "command": "npm.cmd run lint",
+    "cwd": "frontend",
+    "timestamp": "2026-10-25T00:48:10.7318546Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/frontend-lint.log"
+  },
+  {
+    "id": "backend-build",
+    "command": "mvnw.cmd -B -ntp -DskipTests package",
+    "cwd": "backend",
+    "timestamp": "2026-10-25T00:48:19.4825556Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/backend-build.log"
+  },
+  {
+    "id": "backend-integration",
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+    "cwd": ".",
+    "timestamp": "2026-10-25T00:48:41.7245454Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/backend-integration.log"
+  },
+  {
+    "id": "ui-e2e",
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+    "cwd": ".",
+    "timestamp": "2026-10-25T00:49:29.6523984Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/ui-e2e.log"
+  },
+  {
+    "id": "backend-docs",
+    "command": "mvnw.cmd -B -ntp javadoc:javadoc",
+    "cwd": "backend",
+    "timestamp": "2026-10-25T00:58:05.8105802Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/backend-docs.log"
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\account\\controller\\AccountController.java",
+    "sha256": "0dc193e9ce8beeb57d4dbc78942ad5ecd2ee9a6c4ab69dbce5e1cc6644287263"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\account\\dto\\AccountResponse.java",
+    "sha256": "1325943ebeae7a2a99620d1c4646c40842dcba7902ead79cfcac6406ac2b98d9"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\account\\entity\\Account.java",
+    "sha256": "dc367f1353a5df49b6124bafe5943e693b25469236c5e05d1e2653dc0dd89bb3"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\account\\repository\\AccountRepository.java",
+    "sha256": "aa818a932a999b5a13d2b3d906185aacc460bc484d7010c3c437adb7ada66f4c"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\account\\service\\AccountService.java",
+    "sha256": "8c03c4128daca8f9bf09f5f98feb13b3121867a87410bef574ef239f6d3263f2"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\auth\\controller\\AuthController.java",
+    "sha256": "d30d86b7ce63030df08d4acebdd6764d25c825d824607d8b57a96da9838047a8"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\auth\\dto\\IdentityResponse.java",
+    "sha256": "8006660a2d1d74054866e8ee016defb7b59f6cca00b594be538a3ee3d65eecbd"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\auth\\dto\\LoginRequest.java",
+    "sha256": "39dfccf13a38aea926a7e7e367d7b951e3d6f867f279e646976f0fe4787f4013"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\auth\\dto\\RegistrationRequest.java",
+    "sha256": "da26788c1d61d0be82c73c243e7e46ff30341452d5c7c02e0a066bce449ea56a"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\auth\\entity\\User.java",
+    "sha256": "3d3dbef75ac82582412cd68807cf2f6ed8919a1cf3a833eacc16f2939e73c473"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\auth\\repository\\UserRepository.java",
+    "sha256": "87dc0e1cf4059a77d298db9e7b529d480a1d4194cb66fc0c98bdcf248af516f9"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\auth\\service\\AuthService.java",
+    "sha256": "34376cde11281ade940820667bcb25d029bdc2421bc9be2647840144c60cf7b8"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\BankApplication.java",
+    "sha256": "e9b47072e4f1971f90af25ad90e1927ccf2a57bdd73c11ad2121a8138b52ce13"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\movement\\controller\\MovementController.java",
+    "sha256": "0bef64fec323dc3d93e0b28743bc171af0e8d352d4788d59ec3fe884e94d45c8"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\movement\\dto\\MovementPageResponse.java",
+    "sha256": "2f38343d5336b44b826e8b2eeb68813a845d82de82361678aa0822dcd03fe5dc"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\movement\\dto\\MovementResponse.java",
+    "sha256": "94d864ed96db7e9c14733d881ca101dfc1b7bf3c7438dff303f380eefe3c734c"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\movement\\repository\\MovementQueryRepository.java",
+    "sha256": "dda2210f1aba672d6b5cb80e91a88f6d3b6228543f0beab97dcdf82d871ee235"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\movement\\service\\MovementService.java",
+    "sha256": "8dba698cc3dc3943f67bafeaaff8b1907fa3f95e8918cd2f2cc91bf2bf69af95"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\shared\\config\\DemoData.java",
+    "sha256": "96d0e8485ad23f3d2cce3bcb3e0c2aaf5e8ccdeffc51024fb2bd216aa449f14a"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\shared\\exception\\ApiErrors.java",
+    "sha256": "40490089194625fe7b509f57bc780605023413a09b81e8d3831b39616a66ea79"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\shared\\exception\\BankException.java",
+    "sha256": "24ed0b62c2b77b2690345e3b9c15efb28e5f7143a1429d4778c2ccd0e4c704c6"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\shared\\exception\\ErrorResponse.java",
+    "sha256": "6b94ca2db5bc17128545fe3731ee95dd218f1f9dd9ed28a6d91b075eb43a1974"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\shared\\security\\IdleSessionFilter.java",
+    "sha256": "05e21a544ac7ac9e3015d6a42090fa5a15de40aae56bc3271afd072d864bcb9c"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\shared\\security\\SecurityConfig.java",
+    "sha256": "aa78d906ca357da69881f9c6b4ac255d9b16fd43b4ae7a09260766f098d5664c"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\transfer\\controller\\TransferController.java",
+    "sha256": "3593acef1809bd3a392c76151fee1b3302ffa9a39e8f675334b7361709650d6a"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\transfer\\dto\\TransferReceiptResponse.java",
+    "sha256": "c81cba8f33b52b2968e328f4c99a12187037cf12cc2ea633c958b8de69644647"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\transfer\\dto\\TransferRequest.java",
+    "sha256": "5a91c82e2cd9695e0d6121e093d21957c1907ec0c42a6344c22b836a06938cd4"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\transfer\\dto\\TransferResult.java",
+    "sha256": "677d4e34dbe89e3699ac5dd3383e27d7db6fd582af1e11b6253816dc42f6d9b4"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\transfer\\entity\\Transfer.java",
+    "sha256": "556b581fa6ca9e0f57fdb829246f46ed01e6504692a7eafd889a20991f6e0694"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\transfer\\repository\\TransferRepository.java",
+    "sha256": "1435f3457f6ca9fe58d655b95dff5eeee2922173ac6e637f9c97f3ce7bea921a"
+  },
+  {
+    "file": "backend\\src\\main\\java\\co\\edu\\tdea\\bank\\transfer\\service\\TransferService.java",
+    "sha256": "066bcada830ae07ab2564879478631274fbe82ae548ef4a8727d44af196f3958"
+  },
+  {
+    "file": "backend\\src\\main\\resources\\application.properties",
+    "sha256": "3c5d26d3ef83707195f92075e08cd21b0e387a6476fd96879c6785b9dd12eb27"
+  },
+  {
+    "file": "backend\\src\\main\\resources\\db\\schema.sql",
+    "sha256": "3c83a0178691ced58b1674882f6b415a19adde6c9cdb5ff625bd7066cda8a2ec"
+  },
+  {
+    "file": "backend\\src\\test\\java\\co\\edu\\tdea\\bank\\BankIntegrationTest.java",
+    "sha256": "c4cd7398909f529fdc195815397be80479f12e02af0def42db3e94ba524e984f"
+  },
+  {
+    "file": "backend\\src\\test\\java\\co\\edu\\tdea\\bank\\shared\\security\\IdleSessionFilterTest.java",
+    "sha256": "bc4b1b7003d424a25dfc41fe5dc4690e9ba4c048e459f575e7f1693ebc3a9bd4"
+  },
+  {
+    "file": "frontend/src/app/useBanking.ts",
+    "sha256": "35f73624b473a2e773d6c084aef41500545fbdba6defde3fc8bb9d3ad8df4f51"
+  },
+  {
+    "file": "frontend/src/shared/api/client.ts",
+    "sha256": "4460f3768adc64437a21d566672be47137ddf4c45b87ff69f1d17ed2b1f241b5"
+  },
+  {
+    "file": "frontend/src/shared/types/bank.ts",
+    "sha256": "73e37961597074545c93b856e3b672dae82061f0ae23a4fea9edaffad61ed3c2"
+  },
+  {
+    "file": "frontend/src/shared/utils/money.ts",
+    "sha256": "ff64cf772479ba6211f37bd8137a5b07c9ac9035e111dcf006e4eb9499addf6d"
+  },
+  {
+    "file": "frontend/src/features/transfer/pending.ts",
+    "sha256": "c0dcbe0481e0848fa2b1d36cf8dcf51471ab0833b52e5a364625b22dc8b41ecd"
+  },
+  {
+    "file": "frontend/src/features/transfer/validation.ts",
+    "sha256": "df3e32ff210ba6e6887272eccc0b5794d5971a1a9c69918193abae2e8efaea01"
+  },
+  {
+    "file": "frontend/src/features/receipt/qrPayload.ts",
+    "sha256": "969292b66a6be6e106c5cb0d6d631e9e1de0a5880ce5361dc5181cc6408ef7f6"
+  }
+]

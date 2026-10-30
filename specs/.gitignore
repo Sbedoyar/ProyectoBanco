@@ -1,0 +1,10 @@
+# OMNI-SPEC-START
+# OmniSpec local state (managed section). Specs and their records remain versioned.
+manifest.lock/
+*.tmp
+manifest.json.tmp.*
+.omni/verify.lock/
+.omni/verification-logs/
+.omni/backups/
+.omni/inputs/
+# OMNI-SPEC-END

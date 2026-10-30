@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OmniSpec spec fit answers",
+  "description": "Declared answers that select the ceremony route. Structural validation does not prove the answers are true; the route is derived from them, never written by hand.",
+  "type": "object",
+  "required": ["schemaVersion", "reasoning", "files", "modules", "crossesContract", "ambiguity", "existingTests"],
+  "properties": {
+    "schemaVersion": { "enum": [1, 2] },
+    "reasoning": {
+      "enum": ["done", "partial", "skipped"],
+      "description": "Recorded reasoning before drafting. The answer is a declaration, not proof of understanding."
+    },
+    "files": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Estimated affected files. Routing thresholds are project heuristics, not experimentally universal limits."
+    },
+    "modules": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Estimated affected modules or packages requiring coordination."
+    },
+    "crossesContract": {
+      "type": "boolean",
+      "description": "Whether a public API, data schema, storage format or other dependency contract changes."
+    },
+    "ambiguity": {
+      "enum": ["none", "material", "blocked"],
+      "description": "Remaining ambiguity in the request after inspection and clarification."
+    },
+    "existingTests": {
+      "type": "boolean",
+      "description": "Whether automated tests already cover the area being changed."
+    },
+    "risk": {
+      "enum": ["low", "high", "critical"],
+      "description": "Version 2 assessed consequence; high or critical escalates even a one-file change."
+    },
+    "uncertainty": {
+      "enum": ["clear", "material", "blocked"],
+      "description": "Version 2 remaining technical or product uncertainty."
+    },
+    "reversibility": {
+      "enum": ["easy", "difficult"],
+      "description": "Version 2 ability to recover without irreversible data loss or external effects."
+    }
+  },
+  "if": { "properties": { "schemaVersion": { "const": 2 } } },
+  "then": { "required": ["risk", "uncertainty", "reversibility"] },
+  "else": { "properties": { "risk": false, "uncertainty": false, "reversibility": false } },
+  "additionalProperties": false
+}

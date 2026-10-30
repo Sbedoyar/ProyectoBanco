@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "criteria": [
+    {
+      "id": "AC-01",
+      "kind": "interaction",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Quince E2E: rutas activas, foco, protección, retorno a detalle, atrás/adelante, recarga, logout y sesión vencida.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-02",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Resumen cinco filas; transferencia original con revisión, validación, incertidumbre, mismo UUID y único débito;42 archivos congelados.",
+      "checkIds": [
+        "ui-e2e",
+        "presentation-boundary"
+      ]
+    },
+    {
+      "id": "AC-03",
+      "kind": "interaction",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Paginación20, filtros locales honestos, apertura sin recibo, GET detalle recargable, privacidad de tres titulares y cero POST por visita.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-04",
+      "kind": "visual",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Chromium: cinco módulos1440/768/360/320 sin overflow; foco, reflow200%, zoom2x y reduced-motion. Capturas inspeccionadas; ver verification.md.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-05",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Nueve checks preflight exit0:14Java+21Vitest+15Playwright. Formalverify ejecutará catálogo final; docs y prompts actualizados.",
+      "checkIds": [
+        "presentation-boundary",
+        "frontend-unit",
+        "frontend-build",
+        "frontend-lint",
+        "frontend-format",
+        "backend-build",
+        "backend-integration",
+        "ui-e2e",
+        "backend-docs"
+      ]
+    }
+  ]
+}

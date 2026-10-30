@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-10-24T06:09:27.873Z",
+  "scope": "CONTEXT_INPUTS_V2",
+  "inputs": {
+    "AGENTS.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "CONSTITUTION.md": "5e9cf671b943dcd1985043345fa6d48a494850006ccac02d9c7894164cb45da1",
+    "README.md": "821c4b91b0c87043f010795bb696e29dd9c2497f549f1d22a6e416fdd94cbf8f",
+    "SpringBoot AI.pdf": "b015065ddc5a4c20405cff6c30eb9cb8aad5df4d945fd1f1af2a601b4c60cbdd",
+    "backend/pom.xml": "4c5d00a6426df3824ba15a673abc68e6d8ff9656dc10b60712aa46e8b6d75d11",
+    "backend/src/main/java/co/edu/tdea/bank/BankApplication.java": "e9b47072e4f1971f90af25ad90e1927ccf2a57bdd73c11ad2121a8138b52ce13",
+    "backend/src/main/java/co/edu/tdea/bank/BankService.java": "ce464b2af4ee9f51f53874f421e4a8e9076bb06d6f7ac51c7cfe882521663466",
+    "backend/src/main/resources/application.properties": "3c5d26d3ef83707195f92075e08cd21b0e387a6476fd96879c6785b9dd12eb27",
+    "backend/src/main/resources/db/schema.sql": "3c83a0178691ced58b1674882f6b415a19adde6c9cdb5ff625bd7066cda8a2ec",
+    "frontend/package.json": "efa6b298d14ad7285efb0f1e845b5457ba4816901e934f13c6f425e465abe756",
+    "frontend/playwright.config.ts": "a2bdb40f11182994d8138e0289b76d8b18d08d1072d1d2102fe7d6491b6747ad",
+    "frontend/src/App.tsx": "aeec584ccb5869884eded8f65003625702a8778e50deaa70d5d1042aa527486c",
+    "frontend/tsconfig.json": "8be354bc95b6c258fd7d11d6cf251c0a08f8284d7fd54f2001b7def5b76d2b08",
+    "frontend/vite.config.ts": "454ef2cddf03344f64e47fd6c4c1f0eb1730e155f812dcc874037c3419d646ad",
+    "specs/001-transferencias-bancarias/environment.md": "0696f722fdc9f28db1235625cde59b6234f5a207c456ce357a5d971cda95dfa7",
+    "specs/001-transferencias-bancarias/plan.md": "8eda8e7577f704ef948b2d42c86ae638b0d6c081c1107f9a7fec221feb13ce9f",
+    "specs/001-transferencias-bancarias/tasks.md": "9db0025d5fcd3485eb88f48c402f5d466084cc401ccead1d62039ec0307dd868",
+    "specs/001-transferencias-bancarias/verification.md": "c4cd56f4803570c4e928d1dff2857ab2f36edeb8d4c444515b455766e1784599",
+    "specs/001-transferencias-bancarias/evidence/checks/results.json": "2eff2d8a341435ba47cc8248e8ed6b67535ec6f4d9d24b1faa01edac6d7b9d5a",
+    "specs/project-context.md": "e05468ce8556110bc1c910b3d0332217b8b3d36d53113ca45c7a2a827a677915"
+  },
+  "reviewScope": "BYTE_BASELINE_AND_STRUCTURAL_LINKS_ONLY",
+  "semanticReview": "AGENT_OR_HUMAN_REQUIRED"
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "frontend-unit",
+    "command": "npm.cmd run test -- --run",
+    "cwd": "frontend",
+    "timestamp": "2026-10-25T00:37:13.5861737Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/frontend-unit.log"
+  },
+  {
+    "id": "frontend-build",
+    "command": "npm.cmd run build",
+    "cwd": "frontend",
+    "timestamp": "2026-10-25T00:37:21.9790792Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/frontend-build.log"
+  },
+  {
+    "id": "frontend-lint",
+    "command": "npm.cmd run lint",
+    "cwd": "frontend",
+    "timestamp": "2026-10-25T00:37:31.1356499Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/frontend-lint.log"
+  },
+  {
+    "id": "backend-build",
+    "command": "mvnw.cmd -B -ntp -DskipTests package",
+    "cwd": "backend",
+    "timestamp": "2026-10-25T00:37:44.2211286Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/backend-build.log"
+  },
+  {
+    "id": "backend-integration",
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+    "cwd": ".",
+    "timestamp": "2026-10-25T00:38:14.3716161Z",
+    "exitCode": 1,
+    "artifact": "evidence/checks/backend-integration.log"
+  }
+]

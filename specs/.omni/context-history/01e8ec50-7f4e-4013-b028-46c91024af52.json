@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-10-24T04:43:01.900Z",
+  "scope": "CONTEXT_INPUTS_V2",
+  "inputs": {
+    "AGENTS.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "CONSTITUTION.md": "5e9cf671b943dcd1985043345fa6d48a494850006ccac02d9c7894164cb45da1",
+    "specs/README.md": "fc9064fd9fa0610e69c07ecef74009e135dcf1ebee009464739ebda8e3ae30e7",
+    "specs/project-context.md": "f7f90aea42700d7f7ceaadef5b66befa7997d5d08d11ca10b0d2985498f20f08"
+  },
+  "reviewScope": "BYTE_BASELINE_AND_STRUCTURAL_LINKS_ONLY",
+  "semanticReview": "AGENT_OR_HUMAN_REQUIRED"
+}

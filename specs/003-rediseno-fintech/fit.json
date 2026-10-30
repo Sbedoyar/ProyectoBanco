@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 2,
+  "reasoning": "done",
+  "files": 14,
+  "modules": 3,
+  "crossesContract": false,
+  "ambiguity": "none",
+  "existingTests": true,
+  "risk": "high",
+  "uncertainty": "clear",
+  "reversibility": "easy"
+}

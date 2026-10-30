@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 2,
+  "criteria": [
+    {
+      "id": "AC-01",
+      "kind": "visual",
+      "status": "passed",
+      "method": "manual",
+      "evidence": "Revisión real de login y registro1440x1000, dashboard1440 y360, comprobante 320/768/1024/1440. Identidad índigo/tinta/lavanda, Manrope local y SVG consistentes; composición por superficies y tipografía contrastada. Observación de agente, no aprobación humana final.",
+      "observations": [
+        {
+          "actor": "agent",
+          "observer": "Codex",
+          "sessionId": "f40e3d1a-dd63-44cd-8973-9bab2b190e30",
+          "surface": "Dashboard con transferencia confirmada /#history-title",
+          "environment": "Windows, Chromium 156.0.8078.4 / Playwright 1.64.1, Vite5187, PostgreSQL de pruebas",
+          "steps": [
+            "Acceder con usuario ficticio y revisar transferencia12.34 COP",
+            "Confirmar y observar comprobante/QR e histórico",
+            "Navegar con anclaMovimientos, comprobar foco y redimensionar1440x1000",
+            "Volver al inicio sólo para captura completa, revisar composición/cifras/referencia/QR",
+            "Comparar con acceso y registro1440 y comprobante 320/1024"
+          ],
+          "expected": "Identidad consistente, datos íntegros y controles legibles sin desbordamiento",
+          "actual": "Navegación lateral, saldo, formulario, recibo QR y ledger legibles; paleta y fuente coherentes, datos/mensajes conservados. Capturas abiertas e inspeccionadas con view_image.",
+          "result": "passed",
+          "observedAt": "2026-10-25T03:09:04.679Z",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "artifact": "evidence/ui/design-receipt-1440.png"
+        }
+      ]
+    },
+    {
+      "id": "AC-02",
+      "kind": "interaction",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Las12 pruebas HTTP/UI preservan las11 anteriores: registro/acceso/logout, privacidad, validación/revisión/espera, error/reintento, QR realmente decodificado y descarga con un único POST, saldos/históricos y reinicio real.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-03",
+      "kind": "accessibility",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Prueba UI: anchos320/360/768/1440, nombre largo, monto máximo17 dígitos en revisión, referencia UUID móvil, navegación por anclas con foco, fuente local, reduced-motion con animationName none. Reflow texto200% y zoom2x pasan; contraste calculado hint 5.5476, botón 6.1034, borde 3.1879. Revisión inicial de1024 adicional; no auditoríaWCAG completa ni otros navegadores.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-04",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "check-invariants.mjs confirma42 archivos idénticos por SHA256: backend/src completo y useBanking/HTTP/tipos/dinero/pending/validación/payloadQR. Sin cambios backend/API/esquema/seguridad/lógica de transferencias. React/TS/módulos conservados; Manrope es activo OFL, no dependencia de runtime.",
+      "checkIds": [
+        "presentation-boundary",
+        "frontend-build"
+      ]
+    },
+    {
+      "id": "AC-05",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Preflight:14 Java +14 Vitest +12 Playwright=40 pruebas,9 checks exit0. Último ajuste de texto y capturas pasó prueba visual dirigida1/1; formalverify posterior ejecuta catálogo completo ligado a la versión final.",
+      "checkIds": [
+        "presentation-boundary",
+        "frontend-unit",
+        "frontend-build",
+        "frontend-lint",
+        "frontend-format",
+        "backend-build",
+        "backend-integration",
+        "ui-e2e",
+        "backend-docs"
+      ]
+    }
+  ]
+}

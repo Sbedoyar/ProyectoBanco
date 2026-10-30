@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "criteria": [
+    {
+      "id": "AC-01",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Paquetes, records y repositorios separados; MovementQueryRepository mantiene UNION y filtros propios. Revisión de imports/visibilidad y compilación.",
+      "checkIds": [
+        "backend-build"
+      ]
+    },
+    {
+      "id": "AC-02",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "13 pruebas PostgreSQL conservadas: exactitud, saldo completo, dos concurrencias y transferencias opuestas, rollback de crédito/apertura, límites y replay. SQL schema byte a byte idéntico.",
+      "checkIds": [
+        "backend-integration"
+      ]
+    },
+    {
+      "id": "AC-03",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "HTTP comprueba 401/403/409, cookie HttpOnly/SameSiteLax, rotación, logout, privacidad de tercero, origen inyectado rechazado. JUnit comprueba umbral exacto 30m.",
+      "checkIds": [
+        "backend-integration",
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-04",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Prettier check para todo TS/TSX/CSS, App y useBanking separados de seis superficies; build y lint.",
+      "checkIds": [
+        "frontend-format",
+        "frontend-build",
+        "frontend-lint"
+      ]
+    },
+    {
+      "id": "AC-05",
+      "kind": "interaction",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "A registra/accede, transfiere150000, QR PNG decodificado comparado con GET persistido, saldo 850000/SENT; logout y acceso B:1150000/RECEIVED; recarga de ambos conserva. Reinicio real adicional conserva 200.25/apertura única.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-06",
+      "kind": "interaction",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "11 nuevas unitarias validación/pending/API; E2E mantiene respuesta perdida/replay/expiración y añade editar revisión/bloqueo durante petición.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-07",
+      "kind": "visual",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Capturas integradas revisadas acceso/cuenta/comprobante/validación/recibido; 320/360/768/1440 sin overflow, foco por teclado, contraste medido y reflow2x; no auditoríaWCAG completa.",
+      "checkIds": [
+        "ui-e2e"
+      ]
+    },
+    {
+      "id": "AC-08",
+      "kind": "functional",
+      "status": "passed",
+      "method": "inspection",
+      "evidence": "README revisado con árbol/configuración/endpoints/comandos; informe24 secciones, portada sin nombres inventados; prompt literal preservado; ignore ampliado. Git inexistente; no commit/push. Búsqueda de contraseñas locales generadas en fuentes/scripts/docs:0 archivos, no prueba universal de ausencia de secretos."
+    },
+    {
+      "id": "AC-09",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "Baseline 26 pruebas y preflight 39 pruebas; builds/lint/Javadoc 0. Javadoc revisado frente a transacciones, principal, records, locks y errores; formatter check 0. Formal verify aporta registro ligado a huella actual.",
+      "checkIds": [
+        "backend-docs",
+        "backend-build",
+        "backend-integration",
+        "frontend-unit",
+        "frontend-build",
+        "frontend-lint",
+        "frontend-format",
+        "ui-e2e"
+      ]
+    }
+  ]
+}

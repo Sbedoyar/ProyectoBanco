@@ -1,0 +1,1097 @@
+{
+  "$schema": "./.omni/runtime/schema/manifest.schema.json",
+  "schemaVersion": 1,
+  "project": "ProyectoBanco",
+  "version": "0.7.0-preview.2",
+  "profile": "general",
+  "stack": "Undecided",
+  "documentationStandard": "Project conventions (review required)",
+  "qualityGates": "",
+  "agent": "codex",
+  "language": "es",
+  "active_spec": null,
+  "active_archetype": null,
+  "specs": [
+    {
+      "id": "001",
+      "type": "feature",
+      "slug": "001-transferencias-bancarias",
+      "title": "Transferencias Bancarias",
+      "status": "COMPLETED",
+      "created_at": "2026-10-24",
+      "branch": "feat/001-transferencias-bancarias",
+      "updated_at": "2026-10-24T06:23:27.913Z",
+      "completed_at": "2026-10-24T06:23:27.913Z",
+      "verification": {
+        "mode": "automated",
+        "verifiedAt": "2026-10-24T06:23:07.944Z",
+        "fingerprint": "bdcca20f7252d7717fd639ad2e3ba081237269606984a8180273ba2818bcb9e1",
+        "acceptance": {
+          "criteria": [
+            {
+              "id": "AC-01",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration",
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-02",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-03",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-04",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-05",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration",
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-06",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-07",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-08",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-09",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-10",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-11",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-12",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-13",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-14",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration",
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-15",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration",
+                "frontend-unit"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-unit",
+                  "command": "npm.cmd run test -- --run",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-16",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration",
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-17",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-18",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-19",
+              "status": "passed",
+              "method": "automated",
+              "kind": "interaction",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-20",
+              "status": "passed",
+              "method": "automated",
+              "kind": "visual",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-21",
+              "status": "passed",
+              "method": "automated",
+              "kind": "interaction",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-22",
+              "status": "passed",
+              "method": "inspection",
+              "kind": "functional"
+            },
+            {
+              "id": "AC-23",
+              "status": "passed",
+              "method": "manual",
+              "kind": "functional"
+            },
+            {
+              "id": "AC-24",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration",
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            }
+          ],
+          "scope": "DECLARED_EVIDENCE_WITH_EXECUTED_CHECK_BINDINGS",
+          "truthOfEvidence": "AGENT_OR_HUMAN_REVIEW_REQUIRED",
+          "automatedChecksPassed": true
+        }
+      }
+    },
+    {
+      "id": "002",
+      "type": "debt",
+      "slug": "002-revision-modular",
+      "title": "Revision Modular",
+      "status": "COMPLETED",
+      "created_at": "2026-10-25",
+      "branch": "debt/002-revision-modular",
+      "updated_at": "2026-10-25T01:04:18.236Z",
+      "completed_at": "2026-10-25T01:04:18.236Z",
+      "verification": {
+        "mode": "automated",
+        "verifiedAt": "2026-10-25T01:04:02.842Z",
+        "fingerprint": "cb10e8111250c289a9fced9da91703ed2d72f658c7aacb327916eb0b3d3d9b09",
+        "acceptance": {
+          "criteria": [
+            {
+              "id": "AC-01",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-build"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-build",
+                  "command": "mvnw.cmd -B -ntp -DskipTests package",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-02",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-03",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-integration",
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-04",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "frontend-format",
+                "frontend-build",
+                "frontend-lint"
+              ],
+              "checks": [
+                {
+                  "checkId": "frontend-format",
+                  "command": "npm.cmd run format:check",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-build",
+                  "command": "npm.cmd run build",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-lint",
+                  "command": "npm.cmd run lint",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-05",
+              "status": "passed",
+              "method": "automated",
+              "kind": "interaction",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-06",
+              "status": "passed",
+              "method": "automated",
+              "kind": "interaction",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-07",
+              "status": "passed",
+              "method": "automated",
+              "kind": "visual",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-08",
+              "status": "passed",
+              "method": "inspection",
+              "kind": "functional"
+            },
+            {
+              "id": "AC-09",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "backend-docs",
+                "backend-build",
+                "backend-integration",
+                "frontend-unit",
+                "frontend-build",
+                "frontend-lint",
+                "frontend-format",
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "backend-docs",
+                  "command": "mvnw.cmd -B -ntp javadoc:javadoc",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-build",
+                  "command": "mvnw.cmd -B -ntp -DskipTests package",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-unit",
+                  "command": "npm.cmd run test -- --run",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-build",
+                  "command": "npm.cmd run build",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-lint",
+                  "command": "npm.cmd run lint",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-format",
+                  "command": "npm.cmd run format:check",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            }
+          ],
+          "scope": "DECLARED_EVIDENCE_WITH_EXECUTED_CHECK_BINDINGS",
+          "truthOfEvidence": "AGENT_OR_HUMAN_REVIEW_REQUIRED",
+          "automatedChecksPassed": true
+        }
+      }
+    },
+    {
+      "id": "003",
+      "type": "feature",
+      "slug": "003-rediseno-fintech",
+      "title": "Rediseno Fintech",
+      "status": "COMPLETED",
+      "created_at": "2026-10-25",
+      "branch": "feat/003-rediseno-fintech",
+      "updated_at": "2026-10-25T03:15:06.962Z",
+      "completed_at": "2026-10-25T03:15:06.962Z",
+      "verification": {
+        "mode": "automated",
+        "verifiedAt": "2026-10-25T03:14:38.873Z",
+        "fingerprint": "c289fa5a289563cec006882c56bd68bb715b223413b388b54cd9a683fce1fd21",
+        "acceptance": {
+          "criteria": [
+            {
+              "id": "AC-01",
+              "status": "passed",
+              "method": "manual",
+              "kind": "visual",
+              "observations": [
+                {
+                  "actor": "agent",
+                  "observer": "Codex",
+                  "sessionId": "f40e3d1a-dd63-44cd-8973-9bab2b190e30",
+                  "surface": "Dashboard con transferencia confirmada /#history-title",
+                  "environment": "Windows, Chromium 156.0.8078.4 / Playwright 1.64.1, Vite5187, PostgreSQL de pruebas",
+                  "steps": [
+                    "Acceder con usuario ficticio y revisar transferencia12.34 COP",
+                    "Confirmar y observar comprobante/QR e histórico",
+                    "Navegar con anclaMovimientos, comprobar foco y redimensionar1440x1000",
+                    "Volver al inicio sólo para captura completa, revisar composición/cifras/referencia/QR",
+                    "Comparar con acceso y registro1440 y comprobante 320/1024"
+                  ],
+                  "expected": "Identidad consistente, datos íntegros y controles legibles sin desbordamiento",
+                  "actual": "Navegación lateral, saldo, formulario, recibo QR y ledger legibles; paleta y fuente coherentes, datos/mensajes conservados. Capturas abiertas e inspeccionadas con view_image.",
+                  "result": "passed",
+                  "observedAt": "2026-10-25T03:09:04.679Z",
+                  "viewport": {
+                    "width": 1440,
+                    "height": 1000
+                  },
+                  "artifact": "evidence/ui/design-receipt-1440.png"
+                }
+              ]
+            },
+            {
+              "id": "AC-02",
+              "status": "passed",
+              "method": "automated",
+              "kind": "interaction",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-03",
+              "status": "passed",
+              "method": "automated",
+              "kind": "accessibility",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-04",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "presentation-boundary",
+                "frontend-build"
+              ],
+              "checks": [
+                {
+                  "checkId": "presentation-boundary",
+                  "command": "node specs/003-rediseno-fintech/check-invariants.mjs",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-build",
+                  "command": "npm.cmd run build",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-05",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "presentation-boundary",
+                "frontend-unit",
+                "frontend-build",
+                "frontend-lint",
+                "frontend-format",
+                "backend-build",
+                "backend-integration",
+                "ui-e2e",
+                "backend-docs"
+              ],
+              "checks": [
+                {
+                  "checkId": "presentation-boundary",
+                  "command": "node specs/003-rediseno-fintech/check-invariants.mjs",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-unit",
+                  "command": "npm.cmd run test -- --run",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-build",
+                  "command": "npm.cmd run build",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-lint",
+                  "command": "npm.cmd run lint",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-format",
+                  "command": "npm.cmd run format:check",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-build",
+                  "command": "mvnw.cmd -B -ntp -DskipTests package",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-docs",
+                  "command": "mvnw.cmd -B -ntp javadoc:javadoc",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            }
+          ],
+          "scope": "DECLARED_EVIDENCE_WITH_EXECUTED_CHECK_BINDINGS",
+          "truthOfEvidence": "AGENT_OR_HUMAN_REVIEW_REQUIRED",
+          "automatedChecksPassed": true
+        }
+      }
+    },
+    {
+      "id": "004",
+      "type": "feature",
+      "slug": "004-navegacion-modulos",
+      "title": "Navegacion Modulos",
+      "status": "COMPLETED",
+      "created_at": "2026-10-25",
+      "branch": "feat/004-navegacion-modulos",
+      "updated_at": "2026-10-25T03:45:27.425Z",
+      "completed_at": "2026-10-25T03:45:27.425Z",
+      "verification": {
+        "mode": "automated",
+        "verifiedAt": "2026-10-25T03:44:32.305Z",
+        "fingerprint": "0fe2604d86cc9eb03bafd0fb60ec4a880dce98c7a13b9c5715d3f692733c0cb0",
+        "acceptance": {
+          "criteria": [
+            {
+              "id": "AC-01",
+              "status": "passed",
+              "method": "automated",
+              "kind": "interaction",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-02",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "ui-e2e",
+                "presentation-boundary"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "presentation-boundary",
+                  "command": "node specs/004-navegacion-modulos/check-invariants.mjs",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-03",
+              "status": "passed",
+              "method": "automated",
+              "kind": "interaction",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-04",
+              "status": "passed",
+              "method": "automated",
+              "kind": "visual",
+              "checkIds": [
+                "ui-e2e"
+              ],
+              "checks": [
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-05",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "presentation-boundary",
+                "frontend-unit",
+                "frontend-build",
+                "frontend-lint",
+                "frontend-format",
+                "backend-build",
+                "backend-integration",
+                "ui-e2e",
+                "backend-docs"
+              ],
+              "checks": [
+                {
+                  "checkId": "presentation-boundary",
+                  "command": "node specs/004-navegacion-modulos/check-invariants.mjs",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-unit",
+                  "command": "npm.cmd run test -- --run",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-build",
+                  "command": "npm.cmd run build",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-lint",
+                  "command": "npm.cmd run lint",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-format",
+                  "command": "npm.cmd run format:check",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-build",
+                  "command": "mvnw.cmd -B -ntp -DskipTests package",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-docs",
+                  "command": "mvnw.cmd -B -ntp javadoc:javadoc",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            }
+          ],
+          "scope": "DECLARED_EVIDENCE_WITH_EXECUTED_CHECK_BINDINGS",
+          "truthOfEvidence": "AGENT_OR_HUMAN_REVIEW_REQUIRED",
+          "automatedChecksPassed": true
+        }
+      }
+    }
+  ]
+}
