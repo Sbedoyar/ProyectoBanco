@@ -1,0 +1,279 @@
+{
+  "dateBogota": "2026-10-29",
+  "documents": [
+    {
+      "document": "Informe_ProyectoBanco",
+      "pages": 18,
+      "pdfBytes": 1337147,
+      "docxBytes": 1157352,
+      "pdfSha256": "bccdc3fec9b0f112a66c4e7dadfe7cf54def140abdc6fe146a4ef707575f7ef6",
+      "docxSha256": "c1806a22adcd2b8bc1bbe26158929c3ec7daf48166193772e61405e134847673"
+    },
+    {
+      "document": "Prompts_Utilizados",
+      "pages": 26,
+      "pdfBytes": 574846,
+      "docxBytes": 47374,
+      "pdfSha256": "ef8533e71c587593ccaea4a2b817b3b28db6fd2196dfe2059b74a65b4c9c0776",
+      "docxSha256": "139c173ef19f2903d909cf363c0d9bbaf7066679f5d0724570d9c4c97fed741b"
+    }
+  ],
+  "reportNumberedSections": 30,
+  "currentPromptVerbatimInMarkdownAndWord": true,
+  "links": [
+    {
+      "source": "README.md",
+      "target": "docs/Informe_ProyectoBanco.pdf",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/Informe_ProyectoBanco.docx",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/informe.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/Prompts_Utilizados.pdf",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/Prompts_Utilizados.docx",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/prompts.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/guia-sustentacion.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/verificacion-entrega.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "SpringBoot%20AI.pdf",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/evidencias/resumen.png",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/evidencias/comprobante-qr.png",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/evidencias/arquitectura.png",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/evidencias/verificacion-2026-10-29/resultados-publicables.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/evidencias/git-seguridad.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "frontend/public/fonts/OFL.txt",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/arquitectura.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/modelo-relacional.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/inicio-sesion.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/registro.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/resumen.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/flujo-transferencia.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/transferencia.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/revision.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/movimientos.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/comprobante-qr.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/comprobantes.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/responsive.png",
+      "exists": true
+    },
+    {
+      "source": "docs\\informe.md",
+      "target": "evidencias/resultados-ejecucion.png",
+      "exists": true
+    }
+  ],
+  "secretOrDemoPasswordMatchesInDeliveryDocuments": [],
+  "errors": [],
+  "renderMethod": "DOCX generado con Python-docx empaquetado; Word COM invisible exporta PDF; Poppler genera PNG; revisión visual por Codex posterior",
+  "visualReview": "APROBADA por Codex:44 páginas rasterizadas1200px,18 informe y26 prompts. Sin cortes/solapamientos observados. Se corrigieron capturas móviles e índice; páginas sin cambios verificadas por hash.",
+  "reviewedPages": {
+    "Informe_ProyectoBanco": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "Prompts_Utilizados": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  },
+  "reviewer": "Codex",
+  "pageImagesSha256": {
+    "qa-informe\\page-01.png": "d06f5d48be11da51ad060c2c4f7f14f63770bdd193ac25a43615786ea6be627e",
+    "qa-informe\\page-02.png": "44539cc532e2537ae806e291c6075932d264331c813f023a93d74a587afc68f8",
+    "qa-informe\\page-03.png": "c4c8c8d877c84e14c2e2f86f887572f233bb8f1ace4c77cd5499edaa9908aba4",
+    "qa-informe\\page-04.png": "1a5a028a8ebf8aa7ff1ff860c441707cc393ed678c242d69721e711338e427f3",
+    "qa-informe\\page-05.png": "32451c6199331dd7fb2509a532277708ca8ec8c2151c15cbac22332170ce8586",
+    "qa-informe\\page-06.png": "58e4c55ab08d1deff9f43d1d0c4608a6b45bfcb61db327679cccb06870475a2c",
+    "qa-informe\\page-07.png": "6cc826b5e82de2998da011b73d89f9f03bfe53a330200a9c3a5f91ff42a3575f",
+    "qa-informe\\page-08.png": "f661b6ed7fd5c4605d1099bd0f907db737557f2a3de8e078c940dad6183f5dba",
+    "qa-informe\\page-09.png": "88bc5b4dc36251f1a7e596346ce73e94a28623b9d772dfbfc3c47bee09a78abe",
+    "qa-informe\\page-10.png": "a6aefb8d988d183e5f26c77e91b67e322fbcf2e2e7e20c0e281c0bf590c4725e",
+    "qa-informe\\page-11.png": "821ebf89d67250b91024b716bf33f136df37298d2ddc2a052ad2895473f5e4eb",
+    "qa-informe\\page-12.png": "68c61b35db869eeda49a72b4b2a51d5aa6a8f16b42ab9eb0d5c21cbc41f19135",
+    "qa-informe\\page-13.png": "3fa4e73d4b76e1aa13663d14c7c7d6cc3df3da4c5971cb77aa1ea93ee4d05a41",
+    "qa-informe\\page-14.png": "5d31024ec9205ca26f1a5e1a7591f07cd9b62647129cb9316ada9e9a9a6f0501",
+    "qa-informe\\page-15.png": "22518f4312363699177b88176482d346f1d6719e39abbad9121fcaed1dcc318b",
+    "qa-informe\\page-16.png": "29ff05d42cdd3bc9926fd6a9e7f6ed40dbc7b1075431b6ece4dc6ef5d08356f7",
+    "qa-informe\\page-17.png": "4229445630f816d22dddeab93b4e6b4f03e3526328c45f5b42a632c71bd835b4",
+    "qa-informe\\page-18.png": "18213a93edbff3d749c8272ae111d688175b98dbed00f87e4af7fd27fad1feee",
+    "qa-prompts\\page-01.png": "779e00722fdcf060d2ca38725b1b692e9bae459b37698d86e4042d9b9f86c175",
+    "qa-prompts\\page-02.png": "5a4ebf33aaffb397258a95720f4b23c47d26e59478b7f1186856283314c9bd2d",
+    "qa-prompts\\page-03.png": "1481e9ea8b0c354225562e787aa824399eaefb485e440519b971d703fd12c0f4",
+    "qa-prompts\\page-04.png": "519f5c153277af9dd8143912b46686f8adedd7ca9e9423a90718b6fbcaee8d8d",
+    "qa-prompts\\page-05.png": "f90747a45fa729646073cffa2f7630ed0284845c7bf95e4043c2e53959027820",
+    "qa-prompts\\page-06.png": "d50fa565b4bd6687ea04df43bb8aac6786d0b4ad54035c827a3fb58a2af442a5",
+    "qa-prompts\\page-07.png": "3bb14fe39feeec9acfc6e74a0f55c24fe4bab5038d859384d705b22d63111530",
+    "qa-prompts\\page-08.png": "989a12915bdbdb488771b931520fd95f32f0aebfb938f394a3a2cc4fc3375e7a",
+    "qa-prompts\\page-09.png": "f7f27831ba5ead43abb52b705aa19b19c429b5d0aa0d6256c45ada3965b69f61",
+    "qa-prompts\\page-10.png": "83577da0e5fc0fe51c5f2abf0d13a8492d9ba7b7c00dc0e45a95bc216973fba3",
+    "qa-prompts\\page-11.png": "daa7cfd019154a4264f236e23d689b9d8cb926dba4fc164ef61ba8d5a0ab08bc",
+    "qa-prompts\\page-12.png": "2f81a0397c607b99c52870536588e7702b89140b93ee62d5ed7739914e3742ad",
+    "qa-prompts\\page-13.png": "e15ff4ba4f0f177c8775e387d4012bef27df12f9159af06c1ad252816ee3828e",
+    "qa-prompts\\page-14.png": "85d316ad3bdaff58c5008155d3b0811fabc4fc8570aa706ea50a5ffa3e324f6e",
+    "qa-prompts\\page-15.png": "f08e96fdbd833bea58fafd1514a1b74b34a64322c1986114a2e0a9cce9c9a17f",
+    "qa-prompts\\page-16.png": "4982f5307924a75bc7999f8483a2da75052577c9f643fa049ff05efc022dba5f",
+    "qa-prompts\\page-17.png": "1aa53a2b06126ad09a4e820cda8951edf24065b9038444b7423500d1c178ecbe",
+    "qa-prompts\\page-18.png": "ece8babf1a5ed46598cbcafa4501151b05d93bda0017a958109e45d9c906772f",
+    "qa-prompts\\page-19.png": "c1c4704dd8a37fb50c6fda4ece1a7274984528bb67dada32698e3cb5c44f7671",
+    "qa-prompts\\page-20.png": "b3c0993535ac05fb58d53f11453051350dab85d5e7134b3ab0d5b105c6a6dc4a",
+    "qa-prompts\\page-21.png": "50c56e52eea32f88437dc7a7eb818921f8939debf463a713faff376ade0eb5d2",
+    "qa-prompts\\page-22.png": "6f34284687a47128d87b79834a97cff6e07c14554c306f6549e8df1eaa03400e",
+    "qa-prompts\\page-23.png": "42b64de317e6054780a00c101ee27514544afb6bfdf9acd94329f71545473bc8",
+    "qa-prompts\\page-24.png": "7b21608050f1e1bec3f0902734108bc541c309285ea6b2ef7147cdc7d88cddbb",
+    "qa-prompts\\page-25.png": "ddf78807a28b255ccf516d2d15456b728773d702830b77833693b8255fa97ce3",
+    "qa-prompts\\page-26.png": "60ba48f6feba98728469d8552214e982aa2d8b47ec252ae485e563cc79bdc6db"
+  },
+  "metadataReview": {
+    "Informe_ProyectoBanco": {
+      "wordAuthorPresent": false,
+      "wordLastModifiedByPresent": false,
+      "pdfAuthorPresent": false
+    },
+    "Prompts_Utilizados": {
+      "wordAuthorPresent": false,
+      "wordLastModifiedByPresent": false,
+      "pdfAuthorPresent": false
+    }
+  },
+  "metadataScrub": "Eliminado lastModifiedBy del DOCX después de exportar;word/document.xml idéntico por bytes,sin cambio de contenido ni presentación. PDF permanece idéntico a la exportación revisada."
+}

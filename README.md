@@ -1,16 +1,56 @@
-# Banco académico
+# ProyectoBanco
 
-Simulación full stack de transferencias entre cuentas en pesos colombianos. **Todo el dinero es ficticio.** Registro, inicio de sesión, cuenta automática con $1.000.000 COP, histórico privado y comprobante QR. Proyecto académico del Tecnológico de Antioquia; enunciado de entrega: 30 de octubre de 2026.
+Simulación académica full stack para transferir dinero entre cuentas en pesos colombianos, consultar movimientos y recuperar comprobantes QR. **Todo el dinero es ficticio.** Ejercicio del Tecnológico de Antioquia, entrega 30 de octubre de 2026.
 
-## Herramientas
-Java Temurin 25, Maven 3.9.16 (wrapper incluido), Spring Boot 4.1.2, Spring Security/Data JPA y PostgreSQL 18.6. React 19.3.1, TypeScript 6.0.3 y Vite 8.3.5 con Node 24 y npm. Versiones frontend exactas en frontend/package-lock.json, dependencias Spring en BOM. La entrega original está en [verificación 001](specs/001-transferencias-bancarias/verification.md) y la revisión modular en [verificación 002](specs/002-revision-modular/verification.md).
+## Entrega académica
 
-## Ejecutar en Windows
+- Informe: [PDF](docs/Informe_ProyectoBanco.pdf), [Word](docs/Informe_ProyectoBanco.docx), [Markdown](docs/informe.md).
+- Prompts: [PDF](docs/Prompts_Utilizados.pdf), [Word](docs/Prompts_Utilizados.docx), [Markdown](docs/prompts.md).
+- [Guía de sustentación](docs/guia-sustentacion.md) con preguntas, demostración y SQL de lectura.
+- [Matriz y verificación final](docs/verificacion-entrega.md).
+- [Enunciado original](SpringBoot%20AI.pdf), ejercicio en página 11.
 
-Requisitos: JDK25, Node24/npm, PostgreSQL18 con sus herramientas en `C:/Program Files/PostgreSQL/18/bin` y acceso a Maven Central/npm en la primera preparación. PowerShell desde esta carpeta. No hace falta Docker ni modificar el servicio PostgreSQL existente.
+La nueva documentación está preparada localmente en `developer`. No se hizo push ni merge; `main` permanece intacta. Los enlaces anteriores estarán disponibles en GitHub cuando se publique esta actualización autorizadamente.
+
+## Funcionalidades
+
+Registro con cuenta automática y apertura única de 1000000.00 COP, acceso/logout, sesión con 30 minutos de inactividad, saldo y cuenta, transferencias con revisión, idempotencia y recuperación de respuesta incierta. Histórico privado con apertura/enviados/recibidos, comprobantes autorizados y QR descargable desde el resultado confirmado.
+
+Módulos independientes con React Router: `/#/login`, `/#/registro`, `/#/resumen`, `/#/transferencias`, `/#/movimientos`, `/#/comprobantes`, `/#/comprobantes/:reference` y `/#/perfil`. HashRouter permite recarga de enlaces en el JAR sin cambiar Spring. Perfil sólo lectura. Búsqueda y filtros operan sobre la página cargada; no se simula búsqueda global.
+
+![Resumen y saldo](docs/evidencias/resumen.png)
+
+![Comprobante confirmado con QR](docs/evidencias/comprobante-qr.png)
+
+## Tecnologías y arquitectura
+
+Java 25, Spring Boot 4.1.2, Spring Security/Data JPA/JDBC y PostgreSQL 18.6 observado. React 19.3.1, TypeScript 6.0.3, React Router 8.5.0, Vite 8.3.5 y Node 24. Versiones frontend fijadas en package-lock; Maven Wrapper incluido. Javadoc documenta API Java; Vitest/JUnit/Playwright verifican el comportamiento.
+
+Monolito modular con una aplicación Spring y una base por entorno. `auth`, `account`, `transfer` y `movement` agrupan controller/DTO/service y persistencia; `shared` contiene seguridad/configuración/errores. React se organiza por funcionalidades y mantiene el coordinador bancario por encima de las rutas protegidas.
+
+![Arquitectura](docs/evidencias/arquitectura.png)
+
+```text
+backend/src/main/java/co/edu/tdea/bank/  módulos de negocio
+backend/src/main/resources/db/         esquema SQL
+backend/src/test/                      integración e inactividad
+frontend/src/app/                     router layouts contexto
+frontend/src/features/                módulos de interfaz
+frontend/src/shared/                  API tipos componentes utilidades
+frontend/tests/                       HTTP UI QR y persistencia
+scripts/                              arranque y comprobaciones
+docs/                                 entregables y evidencias
+specs/                                decisiones y verificaciones históricas
+```
+
+## Instalación y ejecución en Windows
+
+Requisitos del entorno reproducido: JDK 25, Node 24/npm, PowerShell y PostgreSQL 18 con herramientas en `C:/Program Files/PostgreSQL/18/bin`. Primera preparación requiere acceso a npm/Maven Central. No se requiere Docker.
 
 ```powershell
-# Clúster propio en .local/pgdata, puerto 55432; no toca bases existentes.
+git clone https://github.com/Sbedoyar/ProyectoBanco.git
+cd ProyectoBanco
+git switch developer
 ./scripts/local-db.ps1
 npm.cmd --prefix frontend ci
 npm.cmd --prefix frontend run build
@@ -18,151 +58,58 @@ npm.cmd --prefix frontend run build
 ./scripts/start-backend.ps1 -Mode demo
 ```
 
-Abrir [la aplicación local](http://127.0.0.1:8080). React se incluye dentro del JAR cuando se compila frontend antes de Maven. El backend sólo escucha en loopback. Esperar el mensaje `Started BankApplication` en .local/backend-demo.log; el primer arranque puede tardar varios segundos.
+Abrir [aplicación local](http://127.0.0.1:8080). Esperar `Started BankApplication` en `.local/backend-demo.log`. React compilado se incluye en el JAR; construir frontend antes de Maven. Registrar cuentas con datos ficticios; los datos persisten entre arranques. El código también incluye fixtures públicos para demo/tests; no usar sus contraseñas como credenciales personales.
 
-Usuarios **ficticios públicos de demostración**: `ana@example.test` y `luis@example.test`; contraseña de muestra `Academia2026!`. Sus cuentas se crean sólo en perfil demo. El número de cuenta se consulta iniciando sesión como cada uno; no se asume un número fijo en la interfaz. También puedes registrarte con un correo de ejemplo y contraseña de 12–128 caracteres. Los datos no se reinician al arrancar ni al cerrar sesión.
+`local-db.ps1` crea un clúster dedicado en `.local/pgdata`, puerto 55432, con bases/roles `bank_demo` y `bank_test`. Guarda claves aleatorias sólo en `.local/database.json`, ignorado. No altera el servicio PostgreSQL existente. Para otra ubicación: `./scripts/local-db.ps1 -PostgresBin 'ruta/al/bin'`.
 
-```powershell
-# Detener únicamente el backend de este proyecto.
-./scripts/stop-backend.ps1 -Mode demo
-```
+Para desarrollo, mantener backend demo activo y ejecutar `npm.cmd --prefix frontend run dev`; abrir 5173. Vite reenvía `/api` a 8080. Pruebas: backend 8081 y Vite 5187. Para detener demo: `./scripts/stop-backend.ps1 -Mode demo`. No arrancar dos procesos del mismo modo.
 
-No ejecutar start-backend dos veces para el mismo modo. Para cambiar el directorio de herramientas PostgreSQL: `./scripts/local-db.ps1 -PostgresBin 'ruta/al/bin'`. El script crea roles y bases bank_demo/bank_test en el clúster aislado y guarda contraseñas aleatorias sólo en .local/database.json, ignorado. No compartir .local ni usar credenciales personales aquí. Para detener el clúster, detener primero los backends y usar `pg_ctl -D .local/pgdata -m fast stop` desde el directorio bin de PostgreSQL.
+Variables: `DB_URL`, `DB_USERNAME`, `DB_PASSWORD`; opcionales `PORT` y `COOKIE_SECURE`. Los scripts las configuran sin imprimir valores. HTTP local escucha sólo en 127.0.0.1; un hosting requiere HTTPS/endurecimiento y autorización separada. Nunca publicar `.local`, `.env`, volcados o llaves privadas.
 
-## Desarrollo y configuración
-
-Para hot reload: mantener backend demo y ejecutar `npm.cmd --prefix frontend run dev`; abrir http://127.0.0.1:5173. Vite reenvía /api a 8080. Las pruebas de navegador usan 8081 contra bank_test, nunca demo. Playwright utiliza su propio servidor Vite en 5187; el desarrollo puede continuar en 5173.
-
-Variables del backend: `DB_URL`, `DB_USERNAME`, `DB_PASSWORD`, opcional `PORT` (8080 por defecto), `COOKIE_SECURE` (false sólo para localhost HTTP). Los scripts configuran el entorno del proceso sin imprimir credenciales. Sesión de servidor con cookie HttpOnly/SameSite=Lax, CSRF y caducidad de 30 minutos de inactividad; sin tokens en localStorage. No exponer este perfil HTTP fuera del equipo. Cualquier hosting requiere configuración HTTPS y autorización separada.
-
-## Pruebas
-
-Las suites de backend y UI comparten bank_test y deben ejecutarse **en secuencia**, no en paralelo. El backend de pruebas no debe usarse como demo. La suite JUnit comprueba el nombre/rol/URL dedicados antes de limpiar datos de test. test-backend ejecuta el goal test sin reemplazar el JAR activo; el empaquetado se comprueba por separado y requiere detener sus procesos Java primero.
+## Pruebas reproducibles
 
 ```powershell
-./scripts/test-backend.ps1
-npm.cmd --prefix frontend run test -- --run
-npm.cmd --prefix frontend run lint
-npm.cmd --prefix frontend run build
-# Instalar el navegador una vez desde frontend:
+# Instalar navegador sólo la primera vez
 Push-Location frontend
 npm.cmd exec playwright install chromium
 Pop-Location
-./scripts/test-ui.ps1
-./backend/mvnw.cmd -f backend/pom.xml -B -ntp javadoc:javadoc
+./scripts/local-db.ps1
+./scripts/check-all.ps1 -EvidenceDirectory docs/evidencias/nueva-verificacion
+# El runner detiene demo/test para reemplazar el JAR en Windows
+./scripts/start-backend.ps1 -Mode demo
 ```
 
-JUnit verifica transacciones/locks con PostgreSQL real; no H2. La falla SQL intencional de la prueba de rollback es esperada, no un error de producción. Playwright prueba HTTP, CSRF, registro/acceso, dinero exacto, histórico, respuesta perdida, reintentos y decodifica el QR con jsQR, separado del generador. Javadoc se genera en backend/target/reports/apidocs. Build o lint no certifican apariencia ni accesibilidad; ver evidencia y límites en la especificación.
+JUnit y Playwright usan `bank_test` y deben ejecutarse secuencialmente. JUnit limpia únicamente la base de prueba tras comprobar nombre/rol/URL. No usarla para demostraciones. La falla SQL inducida en el caso de rollback es esperada.
 
-## Arquitectura y contratos
+Verificación ejecutada 29-10-2026 Bogotá: **14 Java + 21 Vitest + 15 Playwright = 50 aprobadas, 0 fallidas, 0 omitidas**. Nueve checks en código 0: frontera SHA256, unitarias, build React, lint, formato, package Java, integración PostgreSQL, E2E y Javadoc. [Comandos ylogs publicables](docs/evidencias/verificacion-2026-10-29/resultados-publicables.json). No hay insignias ni métricas de cobertura inventadas.
 
-Un backend Spring y una SPA React. [Plan](specs/001-transferencias-bancarias/plan.md), [especificación](specs/001-transferencias-bancarias/spec.md) y [tareas](specs/001-transferencias-bancarias/tasks.md). En backend: módulos auth, account, transfer y movement con controlador, DTO y servicio propios; entidades/repositorios JPA por funcionalidad. shared contiene seguridad, configuración y errores. TransferService conserva toda la transacción monetaria; MovementQueryRepository concentra el histórico SQL. Sin microservicios, brokers ni interfaces de servicio especulativas.
+Para ejecutar por separado: `./scripts/test-backend.ps1`, `npm.cmd --prefix frontend run test -- --run`, `npm.cmd --prefix frontend run lint`, `npm.cmd --prefix frontend run format:check`, `npm.cmd --prefix frontend run build`, `./scripts/test-ui.ps1` y `./backend/mvnw.cmd -f backend/pom.xml -B -ntp javadoc:javadoc`. Javadoc queda en `backend/target/reports/apidocs`.
 
-Principales rutas bajo `/api`: auth/csrf, auth/register, auth/login, auth/logout, auth/me, account, movements, transfers, transfers/by-key/{key} y transfers/{reference}. Registro/login/transfer reciben JSON; toda mutación exige el encabezado X-CSRF-TOKEN obtenido del endpoint csrf. Transfer requiere Idempotency-Key UUID y `{ "targetAccountNumber": "12 dígitos", "amount": "150000.00" }`; el origen se obtiene de la sesión. Campos de contrato en inglés; mensajes visibles en español.
+## Histórico y QR
 
-El monto viaja como cadena, se valida antes de convertir y se calcula con BigDecimal/NUMERIC(19,2). No se admiten valores no positivos ni precisión extra. Se bloquean las dos cuentas en orden de ID; débito/crédito/registro confirman juntos. Reintentos de la misma intención conservan clave y payload. La restricción única y la relectura tras bloqueo previenen duplicados; una clave usada con otro contenido se rechaza.
+El histórico combina `opening_movement` con `bank_transfer`: una transferencia se presenta como enviada al origen y recibida al destino. Se ordena por fecha/ID, se pagina y muestra contraparte enmascarada. Apertura no tiene recibo.
 
-Una respuesta perdida no implica rechazo: comprobar by-key o reenviar la misma operación. Un error de generación de QR no repite la transferencia. QR JSON v1 contiene referencia, fecha UTC, monto/COP y cuentas con sólo últimos cuatro dígitos; es un resumen sin firma y no autoriza pagos. El histórico combina apertura y enviados/recibidos propios.
+El QR codifica JSON versión 1 con simulación, referencia, fecha UTC, monto decimal, COP y cuentas enmascaradas. Playwright decodifica el PNG con jsQR y compara los datos. Generar/guardar QR o visitar/recargar el comprobante sólo consulta: no repite el débito. Es un resumen sin firma y no autoriza pagos.
 
-## Recuperación y límites
+## API e integridad
 
-SQL inicial versionado en backend/src/main/resources/db/schema.sql; Hibernate validate, sin ddl-auto=update. Respaldar la base dedicada antes de cambios de esquema/datos y probar restauración en otra base aislada. No borrar movimientos o reiniciar saldos para fingir reversión de una transferencia confirmada. Para comenzar una nueva demostración desde cero se necesita una base dedicada nueva o una restauración explícitamente autorizada.
-
-Una cuenta por usuario, sólo COP y saldo inicial ficticio único. Fuera de alcance: dinero real, préstamos, tarjetas, depósitos/retiros posteriores, administrador, recuperación de contraseña o verificaciones de identidad. No se afirma certificación bancaria, cumplimiento regulatorio ni auditoría WCAG completa. Publicación en GitHub y despliegue son operaciones separadas que no se han realizado.
-
-[Informe](docs/informe.md) · [Prompts utilizados](docs/prompts.md).
-
-
-## Estructura por funcionalidad
-
-```text
-backend/src/main/java/co/edu/tdea/bank/
-  BankApplication.java
-  auth/{controller,dto,service,entity,repository}
-  account/{controller,dto,service,entity,repository}
-  transfer/{controller,dto,service,entity,repository}
-  movement/{controller,dto,service,repository}
-  shared/{config,security,exception}
-frontend/src/
-  app/{App.tsx,useBanking.ts}
-  features/{auth,account,transfer,history,receipt}
-  shared/{api,types,utils}
-  styles/styles.css
-scripts/                   # entorno aislado y comprobaciones
-docs/{informe,prompts}.md   # entrega académica
-specs/002-revision-modular/ # plan y evidencia de revisión
-```
-
-Los módulos son paquetes dentro de una aplicación, sin llamadas remotas entre servicios. No se agregan interfaces de servicio. El esquema PostgreSQL permanece sin migración. La comunicación HTTP y los campos JSON conservan su contrato.
-
-## Guía desde una copia nueva
-
-Cuando exista un repositorio publicado, clonar su URL con Git y abrir la carpeta ProyectoBanco. La URL todavía no se ha publicado; también se puede usar una copia local de los archivos. Ejecutar todos los bloques anteriores desde la raíz. Comprobar `java -version`, `node --version`, `npm.cmd --version` y la existencia de herramientas PostgreSQL antes de instalar. Maven Wrapper descarga Maven automáticamente. En una terminal de desarrollo se inicia backend con el script demo y, en otra, Vite. Para el JAR integrado no hace falta mantener Vite abierto.
-
-| Variable | Uso | Configuración local |
+| Método | Ruta bajo /api | Resultado |
 | --- | --- | --- |
-| DB_URL | JDBC PostgreSQL | Script apunta a bank_demo o bank_test en 55432 |
-| DB_USERNAME / DB_PASSWORD | Rol y contraseña | Generados localmente; nunca copiarlos al repositorio |
-| PORT | Puerto HTTP | 8080 por defecto; test usa 8081 |
-| COOKIE_SECURE | Cookie sobre HTTPS | false exclusivamente en HTTP local |
-| TEST_DB_URL / TEST_DB_USERNAME / TEST_DB_PASSWORD | Integración JUnit | Configuradas por test-backend.ps1 |
-| BANK_API_TARGET | Proxy Vite | 8080 por defecto; Playwright usa 8081 |
-
-## Endpoints principales
-
-| Método | Ruta /api | Resultado |
-| --- | --- | --- |
-| GET | /auth/csrf | Token y nombre de encabezado; sin caché |
-| POST | /auth/register | Identidad creada (201), cuenta y apertura atómicas |
-| POST | /auth/login | Identidad y sesión (200) |
-| POST | /auth/logout | Invalida sesión (204) |
+| GET | /auth/csrf | Token CSRF |
+| POST | /auth/register | Identidad/cuenta/apertura atómicas |
+| POST | /auth/login | Autenticación y sesión |
+| POST | /auth/logout | Invalida sesión |
 | GET | /auth/me | Identidad propia |
-| GET | /account | Cuenta propia y saldo decimal |
-| GET | /movements?page=0&size=20 | Página propia OPENING/SENT/RECEIVED |
-| POST | /transfers | Comprobante 201; replay idéntico 200 |
-| GET | /transfers/by-key/{key} | Resultado confirmado propio; 404 no prueba rechazo de una petición en curso |
-| GET | /transfers/{reference} | Comprobante sólo para participantes |
+| GET | /account | Cuenta propia |
+| GET | /movements?page=0&size=20 | Página OPENING/SENT/RECEIVED |
+| POST | /transfers | Recibo nuevo 201 o replay 200 |
+| GET | /transfers/by-key/{key} | Resultado confirmado del origen |
+| GET | /transfers/{reference} | Recibo sólo para participantes |
 
-## Formato y verificación conjunta
+Transferencia recibe `targetAccountNumber` y `amount` como cadena; el origen sale de la sesión. Mutaciones exigen CSRF y transferencias `Idempotency-Key` UUID. Se usa BigDecimal/NUMERIC(19, 2), locks en orden, replay idéntico y transacción única. Una respuesta perdida no prueba rechazo; conservar clave y contenido.
 
-Prettier se fija como herramienta de desarrollo, sin efecto en producción.
+## Límites y repositorio
 
-```powershell
-npm.cmd --prefix frontend run format
-npm.cmd --prefix frontend run format:check
-# Detiene ambos backends propios antes de reemplazar el JAR.
-./scripts/local-db.ps1
-./scripts/check-all.ps1
-# Volver a abrir la demostración después de comprobar:
-./scripts/start-backend.ps1 -Mode demo
-```
+Simulación local, sin integración financiera, recuperación de contraseña ni auditoría bancaria. El SQL inicial no reemplaza una estrategia de migraciones futura. QR no firmado, búsqueda sólo de página y validación visual acotada a Chromium Windows. Respaldar antes de modificar esquema; no alterar saldos para preparar evidencias.
 
-No se deben ejecutar simultáneamente suites sobre bank_test. El runner guarda comandos, tiempos y códigos de salida bajo specs/002-revision-modular/evidence/checks. Para una referencia independiente puede indicarse -EvidenceDirectory. Antes de un futuro commit revisar git status y los archivos a incluir; no publicar .local, .env, volcados, certificados privados ni artefactos de compilación. La preparación local no crea un repositorio remoto.
-
-## Identidad visual
-
-El rediseño fintech utiliza Manrope variable servida localmente, paleta índigo/tinta/lavanda e iconos SVG propios. [Licencia de la fuente](frontend/public/fonts/OFL.txt). Navegación por módulos con React Router, reflujo y foco mantienen el recorrido existente; se respeta movimiento reducido. Backend, cliente HTTP y lógica monetaria conservados mediante comparación de hashes. [Diseño y evidencia](specs/003-rediseno-fintech/verification.md).
-
-Para guardar comprobaciones de esta entrega sin sobrescribir evidencias anteriores:
-
-```powershell
-./scripts/local-db.ps1
-./scripts/check-all.ps1 -EvidenceDirectory specs/004-navegacion-modulos/evidence/checks
-./scripts/start-backend.ps1 -Mode demo
-```
-
-## Navegación bancaria por módulos
-
-React Router8.5.0 utiliza HashRouter: URLs como `/#/resumen` permiten recargar enlaces del cliente servido por el JAR sin modificar Spring. Layouts de autenticación y banca comparten componentes y contexto; cambiar de ruta no reinicia la sesión ni envía transferencias.
-
-| Ruta del cliente | Contenido |
-| --- | --- |
-| /#/login y /#/registro | Acceso y alta |
-| /#/resumen | Saldo, cuenta, accesos y cinco movimientos recientes |
-| /#/transferencias | Datos, revisión, confirmación y QR |
-| /#/movimientos | Histórico paginado; búsqueda y tipo sobre la página cargada |
-| /#/comprobantes | Transferencias de la página, enviadas y recibidas |
-| /#/comprobantes/:reference | Consulta GET del comprobante autorizado; recarga sin débito |
-| /#/perfil | Nombre, correo y cuenta reales, sólo lectura |
-
-La apertura no tiene comprobante. El backend sólo admite page/size: búsqueda global y totales filtrados requerirían ampliar el contrato; no se simulan. Sin endpoints ni esquema nuevos. [Verificación de módulos](specs/004-navegacion-modulos/verification.md).
+Repositorio [Sbedoyar/ProyectoBanco](https://github.com/Sbedoyar/ProyectoBanco). Trabajar en `developer`; no modificar `main`. [Revisión de Git y seguridad](docs/evidencias/git-seguridad.json). La fuente Manrope se distribuye con [licencia OFL](frontend/public/fonts/OFL.txt).

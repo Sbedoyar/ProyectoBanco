@@ -1,0 +1,35 @@
+ClÃºster aislado disponible en 127.0.0.1:55432; bases bank_demo y bank_test.
+Backend test iniciado (PID 47396), puerto 8081.
+
+> academic-bank-web@1.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:48276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 1 worker
+
+(node:52516) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\journey.spec.ts:62:1 › HTTP: autorización, CSRF, identidad única y logout (1.7s)
+  ok  2 [chromium] › tests\journey.spec.ts:95:1 › recorrido real: registro, transferencia, QR decodificado e histórico privado (8.4s)
+  ok  3 [chromium] › tests\journey.spec.ts:183:1 › respuesta perdida conserva clave y reintenta sin segundo débito (3.7s)
+  ok  4 [chromium] › tests\journey.spec.ts:216:1 › validación, rechazo sin QR y reflow/teclado (2.3s)
+  ok  5 [chromium] › tests\journey.spec.ts:237:1 › fallo de QR regenera imagen sin repetir transferencia (2.9s)
+  ok  6 [chromium] › tests\journey.spec.ts:267:1 › sesión terminada exige acceso y conserva intención sin POST automático (4.0s)
+Measured contrast {
+  hint: 5.547593060954703,
+  button: 6.103368939859564,
+  boundary: 3.1879139932893827
+}
+  ok  7 [chromium] › tests\journey.spec.ts:305:1 › contraste medido de textos/controles y reflow al ampliar (1.8s)
+  ok  8 [chromium] › tests\journey.spec.ts:354:1 › credenciales incorrectas muestran error de acceso sin fingir sesión vencida (1.0s)
+  ok  9 [chromium] › tests\journey.spec.ts:365:1 › HTTP: cookies de sesión, rotación y privacidad entre tres titulares (1.2s)
+  ok 10 [chromium] › tests\journey.spec.ts:417:1 › revisión editable y procesamiento impiden una segunda intención (2.5s)
+  ok 11 [chromium] › tests\journey.spec.ts:451:1 › diseño: acceso móvil, navegación, fuente local y comprobante con animación reducida (3.7s)
+  ok 12 [chromium] › tests\journey.spec.ts:509:1 › módulos: resumen acotado, filtros por página, comprobante GET recargable y perfil real (9.5s)
+  ok 13 [chromium] › tests\journey.spec.ts:611:1 › rutas protegidas: retorno al detalle, logout y privacidad tras cambiar de titular (3.2s)
+  ok 14 [chromium] › tests\journey.spec.ts:655:1 › operación pendiente sobrevive módulos y recarga sin POST automático (3.3s)
+  ok 15 [chromium] › tests\persistence.spec.ts:4:1 › reinicio real conserva saldo, histórico y apertura única (16.2s)
+
+  15 passed (1.2m)

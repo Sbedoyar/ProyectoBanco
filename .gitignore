@@ -19,3 +19,6 @@
 *.pfx
 *.tmp
 **/coverage/
+
+.vscode/
+specs/.omni/context-history/

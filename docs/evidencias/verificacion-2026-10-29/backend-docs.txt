@@ -1,0 +1,19 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< co.edu.tdea:bank >--------------------------
+[INFO] Building Banco acad�mico 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> javadoc:3.12.0:javadoc (default-cli) > generate-sources @ bank >>>
+[INFO] 
+[INFO] <<< javadoc:3.12.0:javadoc (default-cli) < generate-sources @ bank <<<
+[INFO] 
+[INFO] 
+[INFO] --- javadoc:3.12.0:javadoc (default-cli) @ bank ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.454 s
+[INFO] Finished at: 2026-10-29T22:03:40-05:00
+[INFO] ------------------------------------------------------------------------

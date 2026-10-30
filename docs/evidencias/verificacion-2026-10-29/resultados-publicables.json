@@ -1,0 +1,74 @@
+[
+  {
+    "id": "presentation-boundary",
+    "command": "node specs/004-navegacion-modulos/check-invariants.mjs",
+    "cwd": ".",
+    "timestamp": "2026-10-30T03:00:07.4488333Z",
+    "exitCode": 0,
+    "artifact": "presentation-boundary.txt"
+  },
+  {
+    "id": "frontend-unit",
+    "command": "npm.cmd run test -- --run",
+    "cwd": "frontend",
+    "timestamp": "2026-10-30T03:00:07.8099177Z",
+    "exitCode": 0,
+    "artifact": "frontend-unit.txt"
+  },
+  {
+    "id": "frontend-build",
+    "command": "npm.cmd run build",
+    "cwd": "frontend",
+    "timestamp": "2026-10-30T03:00:18.1738787Z",
+    "exitCode": 0,
+    "artifact": "frontend-build.txt"
+  },
+  {
+    "id": "frontend-lint",
+    "command": "npm.cmd run lint",
+    "cwd": "frontend",
+    "timestamp": "2026-10-30T03:00:26.3198881Z",
+    "exitCode": 0,
+    "artifact": "frontend-lint.txt"
+  },
+  {
+    "id": "frontend-format",
+    "command": "npm.cmd run format:check",
+    "cwd": "frontend",
+    "timestamp": "2026-10-30T03:01:12.6290347Z",
+    "exitCode": 0,
+    "artifact": "frontend-format.txt"
+  },
+  {
+    "id": "backend-build",
+    "command": "mvnw.cmd -B -ntp -DskipTests package",
+    "cwd": "backend",
+    "timestamp": "2026-10-30T03:01:15.3121148Z",
+    "exitCode": 0,
+    "artifact": "backend-build.txt"
+  },
+  {
+    "id": "backend-integration",
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+    "cwd": ".",
+    "timestamp": "2026-10-30T03:01:30.2693392Z",
+    "exitCode": 0,
+    "artifact": "backend-integration.txt"
+  },
+  {
+    "id": "ui-e2e",
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+    "cwd": ".",
+    "timestamp": "2026-10-30T03:02:00.2615088Z",
+    "exitCode": 0,
+    "artifact": "ui-e2e.txt"
+  },
+  {
+    "id": "backend-docs",
+    "command": "mvnw.cmd -B -ntp javadoc:javadoc",
+    "cwd": "backend",
+    "timestamp": "2026-10-30T03:03:32.3812980Z",
+    "exitCode": 0,
+    "artifact": "backend-docs.txt"
+  }
+]

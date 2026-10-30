@@ -1,0 +1,22 @@
+engine,database,version
+PostgreSQL,bank_demo,18.6
+(1 row)
+source_suffix,target_suffix,amount,created_at,source_balance_now,target_balance_now
+0003,0002,50000.00,2026-10-29 21:11:24.323191-05,950000.00,1050000.00
+(1 row)
+table_name,column_name,data_type
+account,id,bigint
+account,owner_id,bigint
+account,number,character varying
+account,balance,numeric
+account,opened_at,timestamp with time zone
+bank_transfer,id,uuid
+bank_transfer,source_id,bigint
+bank_transfer,target_id,bigint
+bank_transfer,amount,numeric
+bank_transfer,created_at,timestamp with time zone
+bank_transfer,idempotency_key,uuid
+opening_movement,account_id,bigint
+opening_movement,amount,numeric
+opening_movement,created_at,timestamp with time zone
+(14 rows)
