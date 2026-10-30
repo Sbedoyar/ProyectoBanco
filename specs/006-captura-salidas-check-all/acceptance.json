@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "criteria": [
+    {
+      "id": "AC-01",
+      "kind": "functional",
+      "status": "passed",
+      "method": "inspection",
+      "evidence": "Regresión ejecutada en copia aislada:WindowsPowerShell5 yPowerShell7 con ErrorActionPreference Stop yPSNativeCommandUseErrorActionPreference true. stdout BUILD SUCCESS ystderr Mockito warning capturados,exit0 permite continuar;exit7 real registrado ypropagado,tercer check no ejecutado. Catálogo sólo éxitos devuelve0. El StartAt existente se comparó antes/después sin cambios;se documenta limitación previa PS5."
+    },
+    {
+      "id": "AC-02",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "evidence": "check-all ejecutó nueve checks exit0 en evidence/checks/results.json;14Java+21Vitest+15Playwright=50aprobadas. Advertencia Mockito preservada. Formalverify posterior liga catálogo completo a fuentes finales.",
+      "checkIds": [
+        "presentation-boundary",
+        "frontend-unit",
+        "frontend-build",
+        "frontend-lint",
+        "frontend-format",
+        "backend-build",
+        "backend-integration",
+        "ui-e2e",
+        "backend-docs"
+      ]
+    }
+  ]
+}

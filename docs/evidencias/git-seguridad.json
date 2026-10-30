@@ -1,0 +1,10 @@
+{
+  "dateBogota": "2026-10-29",
+  "branch": "developer",
+  "trackedFiles": 294,
+  "commitsInspected": 1,
+  "forbiddenTrackedPaths": [],
+  "localSecretMatches": [],
+  "forbiddenHistoryPaths": [],
+  "scope": "Rutas y comparación exacta de secretos locales en texto rastreado; no escáner exhaustivo ni OCR. Fixtures públicas de demo/tests identificadas en código; no son claves privadas."
+}

@@ -1092,6 +1092,224 @@
           "automatedChecksPassed": true
         }
       }
+    },
+    {
+      "id": "005",
+      "type": "debt",
+      "slug": "005-entrega-academica",
+      "title": "Entrega Academica",
+      "status": "COMPLETED",
+      "created_at": "2026-10-30",
+      "branch": "debt/005-entrega-academica",
+      "updated_at": "2026-10-30T03:28:49.267Z",
+      "completed_at": "2026-10-30T03:28:49.267Z",
+      "verification": {
+        "mode": "automated",
+        "verifiedAt": "2026-10-30T03:28:11.622Z",
+        "fingerprint": "6778197ec6a93aac207297bfb9033c83c2548cdb143a21d0c4e27fa5561b75d9",
+        "acceptance": {
+          "criteria": [
+            {
+              "id": "AC-01",
+              "status": "passed",
+              "method": "inspection",
+              "kind": "functional"
+            },
+            {
+              "id": "AC-02",
+              "status": "passed",
+              "method": "inspection",
+              "kind": "functional"
+            },
+            {
+              "id": "AC-03",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "presentation-boundary",
+                "frontend-unit",
+                "frontend-build",
+                "frontend-lint",
+                "frontend-format",
+                "backend-build",
+                "backend-integration",
+                "ui-e2e",
+                "backend-docs"
+              ],
+              "checks": [
+                {
+                  "checkId": "presentation-boundary",
+                  "command": "node specs/004-navegacion-modulos/check-invariants.mjs",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-unit",
+                  "command": "npm.cmd run test -- --run",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-build",
+                  "command": "npm.cmd run build",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-lint",
+                  "command": "npm.cmd run lint",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-format",
+                  "command": "npm.cmd run format:check",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-build",
+                  "command": "mvnw.cmd -B -ntp -DskipTests package",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-docs",
+                  "command": "mvnw.cmd -B -ntp javadoc:javadoc",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            },
+            {
+              "id": "AC-04",
+              "status": "passed",
+              "method": "inspection",
+              "kind": "functional"
+            }
+          ],
+          "scope": "DECLARED_EVIDENCE_WITH_EXECUTED_CHECK_BINDINGS",
+          "truthOfEvidence": "AGENT_OR_HUMAN_REVIEW_REQUIRED",
+          "automatedChecksPassed": true
+        }
+      }
+    },
+    {
+      "id": "006",
+      "type": "bugfix",
+      "slug": "006-captura-salidas-check-all",
+      "title": "Captura Salidas Check All",
+      "status": "COMPLETED",
+      "created_at": "2026-10-30",
+      "branch": "fix/006-captura-salidas-check-all",
+      "updated_at": "2026-10-30T04:17:44.141Z",
+      "completed_at": "2026-10-30T04:17:44.141Z",
+      "verification": {
+        "mode": "automated",
+        "verifiedAt": "2026-10-30T04:17:03.488Z",
+        "fingerprint": "535f18d9b3c48ce60180ab49cd36ef31ed68bd95edcb54d654bd1862d627c648",
+        "acceptance": {
+          "criteria": [
+            {
+              "id": "AC-01",
+              "status": "passed",
+              "method": "inspection",
+              "kind": "functional"
+            },
+            {
+              "id": "AC-02",
+              "status": "passed",
+              "method": "automated",
+              "kind": "functional",
+              "checkIds": [
+                "presentation-boundary",
+                "frontend-unit",
+                "frontend-build",
+                "frontend-lint",
+                "frontend-format",
+                "backend-build",
+                "backend-integration",
+                "ui-e2e",
+                "backend-docs"
+              ],
+              "checks": [
+                {
+                  "checkId": "presentation-boundary",
+                  "command": "node specs/004-navegacion-modulos/check-invariants.mjs",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-unit",
+                  "command": "npm.cmd run test -- --run",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-build",
+                  "command": "npm.cmd run build",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-lint",
+                  "command": "npm.cmd run lint",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "frontend-format",
+                  "command": "npm.cmd run format:check",
+                  "cwd": "frontend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-build",
+                  "command": "mvnw.cmd -B -ntp -DskipTests package",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-integration",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "ui-e2e",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+                  "cwd": ".",
+                  "status": "PASSED"
+                },
+                {
+                  "checkId": "backend-docs",
+                  "command": "mvnw.cmd -B -ntp javadoc:javadoc",
+                  "cwd": "backend",
+                  "status": "PASSED"
+                }
+              ],
+              "execution": "PASSED"
+            }
+          ],
+          "scope": "DECLARED_EVIDENCE_WITH_EXECUTED_CHECK_BINDINGS",
+          "truthOfEvidence": "AGENT_OR_HUMAN_REVIEW_REQUIRED",
+          "automatedChecksPassed": true
+        }
+      }
     }
   ]
 }

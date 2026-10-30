@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "criteria": [
+    {
+      "id": "AC-01",
+      "kind": "functional",
+      "status": "passed",
+      "method": "inspection",
+      "evidence": "Informe MD/DOCX/PDF con30secciones;Word exporta el mismo contenido a PDF;18páginas revisadas visualmente,índice actualizado,tablas/diagramas/capturas. docs/evidencias/revision-documental.json incluye huellas."
+    },
+    {
+      "id": "AC-02",
+      "kind": "functional",
+      "status": "passed",
+      "method": "inspection",
+      "evidence": "Prompts MD/DOCX/PDF por15fases,26páginas revisadas. Se conservan originales,fragmentos/síntesis etiquetadas;prompt actual íntegro comprobado contra adjunto enMarkdown yWord."
+    },
+    {
+      "id": "AC-03",
+      "kind": "functional",
+      "status": "passed",
+      "method": "automated",
+      "checkIds": [
+        "presentation-boundary",
+        "frontend-unit",
+        "frontend-build",
+        "frontend-lint",
+        "frontend-format",
+        "backend-build",
+        "backend-integration",
+        "ui-e2e",
+        "backend-docs"
+      ],
+      "evidence": "check-all ejecutado29-10Bogotá,nueve exit0;14Java+21Vitest+15Playwright=50aprobadas,0fallidas/omitidas;logs TXT yresultados publicables en docs/evidencias/verificacion-2026-10-29. Formalverify repite catálogo yliga fuentes finales."
+    },
+    {
+      "id": "AC-04",
+      "kind": "functional",
+      "status": "passed",
+      "method": "inspection",
+      "evidence": "README,guía SQL de lectura,matriz y28enlaces verificados. developer ymain remotas consultadas sólo lectura. No código cambiado,no commit/push. Revisión294archivos/1commit,ningún secreto local coincidente en rastreados/documentos. Pendientes portada ypublicación explícitos."
+    }
+  ]
+}

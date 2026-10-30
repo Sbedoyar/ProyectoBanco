@@ -1,0 +1,74 @@
+[
+  {
+    "id": "presentation-boundary",
+    "command": "node specs/004-navegacion-modulos/check-invariants.mjs",
+    "cwd": ".",
+    "timestamp": "2026-10-30T03:00:07.4488333Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/presentation-boundary.log"
+  },
+  {
+    "id": "frontend-unit",
+    "command": "npm.cmd run test -- --run",
+    "cwd": "frontend",
+    "timestamp": "2026-10-30T03:00:07.8099177Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/frontend-unit.log"
+  },
+  {
+    "id": "frontend-build",
+    "command": "npm.cmd run build",
+    "cwd": "frontend",
+    "timestamp": "2026-10-30T03:00:18.1738787Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/frontend-build.log"
+  },
+  {
+    "id": "frontend-lint",
+    "command": "npm.cmd run lint",
+    "cwd": "frontend",
+    "timestamp": "2026-10-30T03:00:26.3198881Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/frontend-lint.log"
+  },
+  {
+    "id": "frontend-format",
+    "command": "npm.cmd run format:check",
+    "cwd": "frontend",
+    "timestamp": "2026-10-30T03:01:12.6290347Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/frontend-format.log"
+  },
+  {
+    "id": "backend-build",
+    "command": "mvnw.cmd -B -ntp -DskipTests package",
+    "cwd": "backend",
+    "timestamp": "2026-10-30T03:01:15.3121148Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/backend-build.log"
+  },
+  {
+    "id": "backend-integration",
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
+    "cwd": ".",
+    "timestamp": "2026-10-30T03:01:30.2693392Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/backend-integration.log"
+  },
+  {
+    "id": "ui-e2e",
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
+    "cwd": ".",
+    "timestamp": "2026-10-30T03:02:00.2615088Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/ui-e2e.log"
+  },
+  {
+    "id": "backend-docs",
+    "command": "mvnw.cmd -B -ntp javadoc:javadoc",
+    "cwd": "backend",
+    "timestamp": "2026-10-30T03:03:32.3812980Z",
+    "exitCode": 0,
+    "artifact": "evidence/checks/backend-docs.log"
+  }
+]

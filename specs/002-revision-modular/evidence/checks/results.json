@@ -1,58 +1,50 @@
-[
-  {
-    "id": "frontend-unit",
-    "command": "npm.cmd run test -- --run",
-    "cwd": "frontend",
-    "timestamp": "2026-10-25T00:48:00.6787225Z",
-    "exitCode": 0,
-    "artifact": "evidence/checks/frontend-unit.log"
-  },
-  {
-    "id": "frontend-build",
-    "command": "npm.cmd run build",
-    "cwd": "frontend",
-    "timestamp": "2026-10-25T00:48:03.7664390Z",
-    "exitCode": 0,
-    "artifact": "evidence/checks/frontend-build.log"
-  },
-  {
-    "id": "frontend-lint",
-    "command": "npm.cmd run lint",
-    "cwd": "frontend",
-    "timestamp": "2026-10-25T00:48:10.7318546Z",
-    "exitCode": 0,
-    "artifact": "evidence/checks/frontend-lint.log"
-  },
-  {
-    "id": "backend-build",
-    "command": "mvnw.cmd -B -ntp -DskipTests package",
-    "cwd": "backend",
-    "timestamp": "2026-10-25T00:48:19.4825556Z",
-    "exitCode": 0,
-    "artifact": "evidence/checks/backend-build.log"
-  },
-  {
-    "id": "backend-integration",
-    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-backend.ps1",
-    "cwd": ".",
-    "timestamp": "2026-10-25T00:48:41.7245454Z",
-    "exitCode": 0,
-    "artifact": "evidence/checks/backend-integration.log"
-  },
-  {
-    "id": "ui-e2e",
-    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-ui.ps1",
-    "cwd": ".",
-    "timestamp": "2026-10-25T00:49:29.6523984Z",
-    "exitCode": 0,
-    "artifact": "evidence/checks/ui-e2e.log"
-  },
-  {
-    "id": "backend-docs",
-    "command": "mvnw.cmd -B -ntp javadoc:javadoc",
-    "cwd": "backend",
-    "timestamp": "2026-10-25T00:58:05.8105802Z",
-    "exitCode": 0,
-    "artifact": "evidence/checks/backend-docs.log"
-  }
+﻿[
+    {
+        "id":  "presentation-boundary",
+        "command":  "node specs/004-navegacion-modulos/check-invariants.mjs",
+        "cwd":  ".",
+        "timestamp":  "2026-10-30T03:52:56.7915820Z",
+        "exitCode":  0,
+        "artifact":  "evidence/checks/presentation-boundary.log"
+    },
+    {
+        "id":  "frontend-unit",
+        "command":  "npm.cmd run test -- --run",
+        "cwd":  "frontend",
+        "timestamp":  "2026-10-30T03:52:57.1265883Z",
+        "exitCode":  0,
+        "artifact":  "evidence/checks/frontend-unit.log"
+    },
+    {
+        "id":  "frontend-build",
+        "command":  "npm.cmd run build",
+        "cwd":  "frontend",
+        "timestamp":  "2026-10-30T03:52:59.5228542Z",
+        "exitCode":  0,
+        "artifact":  "evidence/checks/frontend-build.log"
+    },
+    {
+        "id":  "frontend-lint",
+        "command":  "npm.cmd run lint",
+        "cwd":  "frontend",
+        "timestamp":  "2026-10-30T03:53:03.9381741Z",
+        "exitCode":  0,
+        "artifact":  "evidence/checks/frontend-lint.log"
+    },
+    {
+        "id":  "frontend-format",
+        "command":  "npm.cmd run format:check",
+        "cwd":  "frontend",
+        "timestamp":  "2026-10-30T03:53:09.9168093Z",
+        "exitCode":  0,
+        "artifact":  "evidence/checks/frontend-format.log"
+    },
+    {
+        "id":  "backend-build",
+        "command":  "mvnw.cmd -B -ntp -DskipTests package",
+        "cwd":  "backend",
+        "timestamp":  "2026-10-30T03:53:12.0306034Z",
+        "exitCode":  0,
+        "artifact":  "evidence/checks/backend-build.log"
+    }
 ]
